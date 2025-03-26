@@ -1,6 +1,6 @@
 import OptionLayout from "./Layouts/optionlayout";
 import MainLayout from "./Layouts/mainLayout";
-import Header from "./components/Header";
+import Header from "./components/Header"; 
 
 
 export default function Home() {
