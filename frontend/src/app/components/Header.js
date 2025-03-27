@@ -1,91 +1,98 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { FaUserCircle, FaHeart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const Header = () => {
   const [location, setLocation] = useState("Mumbai");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [carssss, setCarssss] = useState([]);
+
+
+
+
+  const [cars, setCars] = useState([]);
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(100000);
+
+
+  // useEffect(() => {
+  //   axios.get('http://127.0.0.1:8000/api/rupesh/', { timeout: 5000 }) // 5 seconds timeout
+  //     .then(response => {
+  //       console.log(response.data);
+  //       const cars = response.data;
+
+  //       setCarssss(cars);
+
+  //       console.log(carssss)
+
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // }, []);
+
+
+
+  useEffect(() => {
+    fetchCars();
+}, [minPrice, maxPrice]);
+
+const fetchCars = async () => {
+    try {
+        const response = await fetch(`http://localhost:8000/cars/?min_price=${minPrice}&max_price=${maxPrice}`);
+        const data = await response.json();
+        setCars(data);
+    } catch (error) {
+        console.error("Error fetching cars:", error);
+    }
+};
+
+
 
   const countries = ["Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata"];
 
   return (
-    <header className="flex items-center justify-between px-6 py-3 shadow-md bg-white relative">
-      {/* Left - Logo */}
-      <div className="flex items-center space-x-4">
-        <img
-          src="https://media.cars24.com/cars24/seo/static/1_20230830_1693395013.png"
-          alt="CARS24"
-          className="h-8"
-        />
+    <>
 
-        {/* Location Dropdown */}
-        <div className="relative">
-          <div
-            className="flex items-center space-x-1 cursor-pointer"
-            onClick={() => setShowDropdown(!showDropdown)}
-          >
-            <span className="text-lg font-medium">{location}</span>
-            <IoMdArrowDropdown size={18} />
-          </div>
 
-          {/* Dropdown Menu */}
-          {showDropdown && (
-            <ul
-              className="absolute left-0 mt-2 w-32 bg-white shadow-lg rounded-lg border border-gray-200"
-              onMouseLeave={() => setShowDropdown(false)} // Ensures it doesn't close until mouse leaves dropdown
-            >
-              {countries.map((city, index) => (
-                <li
-                  key={index}
-                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => {
-                    setLocation(city);
-                    setShowDropdown(false); // Close dropdown after selection
-                  }}
-                >
-                  {city}
-                </li>
-              ))}
+      {/* <div>
+        cars data is coming
+
+        <div className="container mx-auto p-4">
+  {carssss.map((car, index) => (
+    <div key={index} className="card bg-white shadow-lg rounded-lg p-6 mb-4">
+      <h2 className="text-2xl font-semibold text-gray-800">{car.brand}</h2>
+      <p className="text-xl font-bold text-gray-700 mt-2">₹ {car.price}</p>
+    </div>
+  ))}
+</div>
+
+</div> */}
+
+
+
+<div>
+            <h2>Car Listings</h2>
+            <label>Min Price:</label>
+            <input type="number" value={minPrice} onChange={(e) => setMinPrice(e.target.value)} />
+
+            <label>Max Price:</label>
+            <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
+
+            <button onClick={fetchCars}>Filter</button>
+
+            <ul>
+                {cars.map((car) => (
+                    <li key={car._id}>{car.name} - ${car.price}</li>
+                ))}
             </ul>
-          )}
         </div>
-      </div>
 
-      {/* Center - Navigation */}
-      <nav className="flex space-x-6 text-gray-700">
-        <div className="flex items-center space-x-1 cursor-pointer text-orange-500">
-          <span>Buy used car</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-        <div className="flex items-center space-x-1 cursor-pointer">
-          <span>Sell car</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-        <div className="flex items-center space-x-1 cursor-pointer">
-          <span>Car finance</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-        <div className="flex items-center space-x-1 cursor-pointer">
-          <span>New cars</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-        <div className="flex items-center space-x-1 cursor-pointer">
-          <span>Car services</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-      </nav>
 
-      {/* Right - Icons & Account */}
-      <div className="flex items-center space-x-4">
-        <FaHeart size={20} className="text-gray-600 cursor-pointer" />
-        <div className="flex items-center space-x-2 cursor-pointer">
-          <FaUserCircle size={24} className="text-gray-600" />
-          <span>Hello, Ankit</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
-      </div>
-    </header>
+    </>
+
   );
 };
 
