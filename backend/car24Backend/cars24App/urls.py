@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     
-    path('viewapi/',views.carListAPI)
+    path('viewapi/',views.carListAPI),
+    path('filterapi/',views.filter_api)
 ]
