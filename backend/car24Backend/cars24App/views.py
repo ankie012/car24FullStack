@@ -1,54 +1,61 @@
-from bson.json_util import dumps # auto handle this error dump(data)
-from django.http import HttpResponse,JsonResponse
-import pymongo
-from pymongo import MongoClient 
-import json
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import CarSerializer
+from pymongo import MongoClient
 
-# todo Database connections :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+# MongoDB connection
 client = MongoClient("mongodb://localhost:27017/")
-db=client.cars24
-collection=db.cars 
+db = client.cars_dealership
+collection = db.cars
 
-def mainPage(request):
-    return HttpResponse("welcome to main page !!!")
+class FilterCarsView(APIView):
+    def get(self, request):
+        multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors', 'RTO', 'owners']
+        query = {}
 
-def carListAPI(request):
-    data = collection.find({},{'_id':0})    
-    # data = dumps(data,indent=3)  
-    data=list(data) 
-    return JsonResponse(data, safe=False) 
+        # Multi-valued filters
+        for field in multi_valued_fields:
+            values = request.GET.getlist(field)
+            if values:
+                query[field] = {"$in": values}
 
-def filter_api(request):
-    # Get individual parameters from the URL (query string)
-    brand_param = request.GET.get('brand')
-    fuel_type_param = request.GET.get('fuel_type')
-    body_type_param = request.GET.get('body_type')
+        # Single-value filters
+        price = request.GET.get('price')
+        if price:
+            try:
+                query['price'] = {'$lte': int(price)}
+            except ValueError:
+                return Response({'error': 'Invalid price value'}, status=status.HTTP_400_BAD_REQUEST)
 
-    # Build query dictionary
-    query = {}
+        seats = request.GET.get('seats')
+        if seats:
+            try:
+                query['seater'] = int(seats)
+            except ValueError:
+                return Response({'error': 'Invalid seats value'}, status=status.HTTP_400_BAD_REQUEST)
 
-    # If brand is provided, add it to the query
-    if brand_param:
-        query["brand"] = brand_param
+        # Query MongoDB
+        data = list(collection.find(query))
 
-    # If fuel_type is provided, process it and add it to the query
-    if fuel_type_param:
-        fuel_types = fuel_type_param.split(',')  # Split the comma-separated values into a list
-        query["fuel_type"] = {"$in": fuel_types}  # MongoDB's $in operator allows multi-select filter
+        # Convert ObjectIds to strings
+        for item in data:
+            item['_id'] = str(item['_id'])
 
-    # If body_type is provided, process it and add it to the query
-    if body_type_param:
-        body_types = body_type_param.split(',')  # Split the comma-separated values into a list
-        query["body_type"] = {"$in": body_types}  # MongoDB's $in operator allows multi-select filter
+        # Serialize
+        serializer = CarSerializer(data, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-    # Execute the query on the MongoDB collection
-    result = collection.find(query)
 
-    # Convert MongoDB result to list and handle serialization
-    result_list = list(result)
+# @api_view(['GET'])
+# def mainPage(request):
+#     return Response({"message": "welcome to main page !!!"})
 
-    # Convert ObjectId to string for JSON serialization
-    for item in result_list:
-        item["_id"] = str(item["_id"])  # Convert ObjectId to string
-
-    return JsonResponse({"results": result_list}, safe=False)
+# @api_view(['GET'])
+# def carListAPI(request):
+#     data = list(collection.find()) # convert cursor to list
+#     # Convert ObjectId to string for JSON serialization
+#     for item in data:
+#         item["_id"] = str(item["_id"])   
+#     return Response(data,safe=False)  
+ 

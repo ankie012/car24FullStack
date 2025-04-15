@@ -1,0 +1,20 @@
+from rest_framework import serializers
+
+class CarSerializer(serializers.Serializer):
+    _id = serializers.CharField()
+    brand = serializers.CharField()
+    model = serializers.CharField()
+    variant = serializers.CharField()
+    year = serializers.IntegerField()
+    price = serializers.IntegerField()
+    fuel_type = serializers.CharField()
+    body_type = serializers.CharField()
+    transmission = serializers.CharField()
+    colors = serializers.CharField()
+    seater = serializers.IntegerField()
+    engine = serializers.DictField()
+    static_features = serializers.ListField(child=serializers.CharField())
+    images = serializers.CharField()
+    Discount = serializers.CharField()
+    Owners = serializers.ListField(child=serializers.CharField())
+    RTO = serializers.CharField()

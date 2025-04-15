@@ -1,10 +1,7 @@
 
 from django.urls import path
-
-from . import views
+from .views import FilterCarsView
 
 urlpatterns = [
-    
-    path('viewapi/',views.carListAPI),
-    path('filterapi/',views.filter_api)
+    path('cars/', FilterCarsView.as_view(), name='filter-cars'),  # RESTful endpoint
 ]
