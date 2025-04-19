@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import axios from "axios";
+// import axios from "axios"; 
 
 const fuelOptions = [
   { label: "Petrol", value: "Petrol", image: { url: "https://media.cars24.com/india/buy/facets_v4/fuel_type/Petrol.png" } },
@@ -14,25 +14,8 @@ const FuelFilter = ({ onFuelChange, carData = [] }) => {
   const [selectedFuels, setSelectedFuels] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState([]);
-
-  // Use useEffect to fetch the filter data based on selected fuels
-  useEffect(() => {
-    if (selectedFuels.length > 0) {
-      const fuelTypes = selectedFuels.join(','); // Join selected fuels as a comma-separated string
-      const url = `http://localhost:8000/api/filterapi/?fuel_type=${fuelTypes}`;
-      
-      console.log('Fetching filters for:', selectedFuels);
-      axios.get(url)
-        .then(res => {
-          setFilter(res.data);
-          console.log('Fetched filter data:', res.data);
-        })
-        .catch(err => {
-          console.error('Error fetching data:', err);
-        });
-    }
-  }, [selectedFuels]); // Only run when selectedFuels change
-
+  
+ 
   const handleCheckboxChange = (fuel) => {
     const updatedFuels = selectedFuels.includes(fuel)
       ? selectedFuels.filter((f) => f !== fuel)

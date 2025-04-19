@@ -1,33 +1,42 @@
-import React from "react";
+import React,{useState} from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 
 const CarCard = ({ car }) => {
+
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorited(!isFavorited);
+  };
+
   return (
-    <Card className="p-4 shadow-lg rounded-2xl border relative w-80">
-      {/* Heart Icon */}
-      <Heart className="absolute top-4 right-4 text-gray-400 cursor-pointer" />
+    <Card className="p-4 shadow-lg rounded-2x1 border relative w-80">   
+      {/* Heart Icon */} 
+      <Heart
+        onClick={toggleFavorite}
+        className={`absolute top-4 right-4 cursor-pointer transition-colors duration-300 ${
+          isFavorited ? "text-red-500 fill-red-500" : "text-gray-400"
+        }`}
+      />
       
       {/* Car Image */}
-      <img
-        src={car.image}
-        alt={car.name}
-        className="w-full h-40 object-cover rounded-lg"
-      />
+      <img src={`/assets/${car.images}`} alt={`${car.brand} ${car.model}`}  className="w-full h-40 object-cover rounded-lg" />
+      
       
       <CardContent className="mt-4">
         {/* Car Name */}
-        <h2 className="text-lg font-bold">{car.modelYear} {car.brand} {car.name} {car.variant}</h2>
+        <h2 className="text-lg font-bold"> {car.brand}  {car.variant}</h2>
         
         {/* Car Details */}
-        <p className="text-sm text-gray-500">{car.kmDriven} km | {car.fuel} | {car.transmission} | {car.ownership}</p>
+        <p className="text-m text-gray-500">{car.year}  | {car.model} | {car.fuel_type} | {car.transmission} </p>
         
         {/* EMI & Price */}
         <div className="flex justify-between items-center mt-2">
-          <p className="text-md font-semibold">EMI ₹{car.emi}/m</p>
+          <p className="text-md font-semibold">EMI ₹ 10k {car.emi}/m</p>
           <p className="text-lg font-bold text-green-600">₹{car.price.toLocaleString()} lakh</p>
-        </div>
+        </div> 
         
         {/* Other Charges */}
         <p className="text-sm text-gray-400">+ other charges</p>

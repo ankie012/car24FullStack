@@ -1,12 +1,12 @@
 import React from 'react'
-import CarCompoennt from '../components/carCompoennt'
+import CarComponent from '../components/carComponent'
 
-const mainLayout = () => {
+const mainLayout = () => {  
   return (
-    <div className='w-5/6 h-screen'>
-      <CarCompoennt />
+    <div className='w-[90%] h-screen'>   
+      <CarComponent /> 
     </div>
   )
-}
+} 
 
 export default mainLayout

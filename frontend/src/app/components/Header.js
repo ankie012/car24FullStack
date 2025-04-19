@@ -2,14 +2,15 @@
 import { useState } from "react";
 import { FaUserCircle, FaHeart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
+import Login from './Login';
 
 const Header = () => {
   const [location, setLocation] = useState("Mumbai");
   const [showDropdown, setShowDropdown] = useState(false);
-
+  const [showLogin, setShowLogin] = useState(false); 
   const countries = ["Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata"];
 
-  return (
+  return ( 
     <header className="flex items-center justify-between px-6 py-3 shadow-md bg-white relative">
       {/* Left - Logo */}
       <div className="flex items-center space-x-4">
@@ -25,8 +26,8 @@ const Header = () => {
             className="flex items-center space-x-1 cursor-pointer"
             onClick={() => setShowDropdown(!showDropdown)}
           >
-            <span className="text-lg font-medium">{location}</span>
-            <IoMdArrowDropdown size={18} />
+            <span className="text-lg font-medium">{location}</span> 
+            <IoMdArrowDropdown size={18} />  
           </div>
 
           {/* Dropdown Menu */}
@@ -57,7 +58,7 @@ const Header = () => {
         <div className="flex items-center space-x-1 cursor-pointer text-orange-500">
           <span>Buy used car</span>
           <IoMdArrowDropdown size={16} />
-        </div>
+        </div> 
         <div className="flex items-center space-x-1 cursor-pointer">
           <span>Sell car</span>
           <IoMdArrowDropdown size={16} />
@@ -79,13 +80,27 @@ const Header = () => {
       {/* Right - Icons & Account */}
       <div className="flex items-center space-x-4">
         <FaHeart size={20} className="text-gray-600 cursor-pointer" />
-        <div className="flex items-center space-x-2 cursor-pointer">
-          <FaUserCircle size={24} className="text-gray-600" />
-          <span>Hello, Ankit</span>
-          <IoMdArrowDropdown size={16} />
-        </div>
+
+        <div
+        className="flex items-center space-x-2 cursor-pointer"
+        onClick={() => setShowLogin(true)}
+      >
+        <FaUserCircle size={24} className="text-gray-600" />
+        <span>Hello, Ankit</span>
+        <IoMdArrowDropdown size={16} />
       </div>
-    </header>
+
+      {showLogin && (
+        <div className="modal-backdrop">
+          <div className="modal-content">
+            <Login />  
+            <button onClick={() => setShowLogin(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
+      </div>
+    </header> 
   );
 };
 

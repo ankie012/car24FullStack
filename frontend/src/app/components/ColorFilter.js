@@ -8,8 +8,8 @@ const colors = [
   { name: "Blue", icon: "https://media.cars24.com/india/buy/facets_v4/colour/blue.png" },
   { name: "Brown", icon: "https://media.cars24.com/india/buy/facets_v4/colour/brown.png" },
   { name: "Black", icon: "https://media.cars24.com/india/buy/facets_v4/colour/black.png" },
-  { name: "Orange", icon: "https://media.cars24.com/india/buy/facets_v4/colour/orange.png" },
-  { name: "Purple", icon: "https://media.cars24.com/india/buy/facets_v4/colour/purple.png" },
+  // { name: "Orange", icon: "https://media.cars24.com/india/buy/facets_v4/colour/orange.png" },
+  // { name: "Purple", icon: "https://media.cars24.com/india/buy/facets_v4/colour/purple.png" },
   { name: "Green", icon: "https://media.cars24.com/india/buy/facets_v4/colour/green.png" },
   { name: "Yellow", icon: "https://media.cars24.com/india/buy/facets_v4/colour/yellow.png" },
 ];

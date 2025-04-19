@@ -2,7 +2,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import CarSerializer
+from .serializers import CarCardSerializer
 from pymongo import MongoClient
+import re 
+
 
 # MongoDB connection
 client = MongoClient("mongodb://localhost:27017/")
@@ -10,30 +13,43 @@ db = client.cars_dealership
 collection = db.cars
 
 class FilterCarsView(APIView):
-    def get(self, request):
-        multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors', 'RTO', 'owners']
+    def get(self, request): 
+        multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors','seater', 'RTO', 'owners']
         query = {}
 
         # Multi-valued filters
         for field in multi_valued_fields:
             values = request.GET.getlist(field)
+            
             if values:
-                query[field] = {"$in": values}
-
+                if field == 'transmission':  # Use regex for partial, case-insensitive match
+                    query[field] = {
+                        "$in": [re.compile(f".*{re.escape(val)}.*", re.IGNORECASE) for val in values]
+                    }
+                if field == 'colors':  # Use regex for partial, case-insensitive match
+                    query[field] = {
+                        "$in": [re.compile(f".*{re.escape(val)}.*", re.IGNORECASE) for val in values]
+                    }
+                if field=='seater':
+                    query[field]={values} 
+                else: 
+                    query[field] = {"$in": values}
+                       
+        
         # Single-value filters
-        price = request.GET.get('price')
-        if price:
-            try:
-                query['price'] = {'$lte': int(price)}
-            except ValueError:
-                return Response({'error': 'Invalid price value'}, status=status.HTTP_400_BAD_REQUEST)
+        min_price = request.GET.get('min_price')
+        max_price = request.GET.get('max_price')
 
-        seats = request.GET.get('seats')
-        if seats:
-            try:
-                query['seater'] = int(seats)
-            except ValueError:
-                return Response({'error': 'Invalid seats value'}, status=status.HTTP_400_BAD_REQUEST)
+        if min_price or max_price:
+            price_query = {}
+            if min_price:
+                price_query["$gte"] = int(min_price)
+            if max_price:
+                price_query["$lte"] = int(max_price)
+            
+            if price_query:
+                query["price"] = price_query 
+
 
         # Query MongoDB
         data = list(collection.find(query))
@@ -47,15 +63,12 @@ class FilterCarsView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-# @api_view(['GET'])
-# def mainPage(request):
-#     return Response({"message": "welcome to main page !!!"})
 
-# @api_view(['GET'])
-# def carListAPI(request):
-#     data = list(collection.find()) # convert cursor to list
-#     # Convert ObjectId to string for JSON serialization
-#     for item in data:
-#         item["_id"] = str(item["_id"])   
-#     return Response(data,safe=False)  
+# class carListApi(APIView):
+#     def get(self,request):
+#         cars = list(collection.find()) 
+#         for item in cars:
+#             item["_id"] = str(item["_id"]) 
+#         serializer=CarCardSerializer(cars,many=True)  
+#         return Response(serializer.data)  
  

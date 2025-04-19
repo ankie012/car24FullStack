@@ -6,10 +6,10 @@ import Header from "./components/Header";
 export default function Home() {
   return (<>
     <Header />
-    <div className="flex m-10">
-      <MainLayout />
-    </div>
+    <div className="flex m-5">  
+      <MainLayout />  
+    </div> 
   </>
 
   );
-}
+} 
