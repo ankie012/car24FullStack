@@ -41,13 +41,13 @@ const CarComponent = () => {
           min_price: minBudget,
           max_price: maxBudget,
           fuel_type: selectedFuels, // ✅ pass it as an array
-          body_type: selectedBodyType || "",
-          transmission: selectedTransmission || "",
+          body_type: selectedBodyType,
+          transmission: selectedTransmission , 
           colors: selectedColor || "",
           seater: selectedSeats || "",
           owners: selectedOwners,
           RTO: selectedRTOs,
-          Discount: selectedDiscount || "",
+          Discount: selectedDiscount || "", 
           search: searchQuery || ""
         }; 
 
