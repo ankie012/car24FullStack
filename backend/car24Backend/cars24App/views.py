@@ -17,7 +17,7 @@ class FilterCarsView(APIView):
     def get(self, request): 
         multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors', 'seater', 'RTO', 'owners' ,'Discount']
         query = {}
-        
+
         # Multi-valued filters
         for field in multi_valued_fields:
             values = request.GET.getlist(field)
