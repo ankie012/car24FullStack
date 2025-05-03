@@ -16,7 +16,7 @@ class CarSerializer(serializers.Serializer):
     seater = serializers.IntegerField()
     engine = serializers.DictField()
     static_features = serializers.ListField(child=serializers.CharField())
-    images = serializers.CharField()
+    images = serializers.CharField() 
     Owners = serializers.ListField(child=serializers.CharField())
     RTO = serializers.CharField()
     Discount = serializers.CharField()

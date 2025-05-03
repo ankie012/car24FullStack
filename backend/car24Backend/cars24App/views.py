@@ -12,32 +12,30 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client.cars_dealership
 collection = db.cars
 
+
 class FilterCarsView(APIView):
     def get(self, request): 
-        multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors','seater', 'RTO', 'owners']
+        multi_valued_fields = ['brand', 'model', 'fuel_type', 'body_type', 'transmission', 'colors', 'seater', 'RTO', 'owners' ,'Discount']
         query = {}
-
+        
         # Multi-valued filters
         for field in multi_valued_fields:
             values = request.GET.getlist(field)
-            
+
             if values:
-                if field == 'transmission':  # Use regex for partial, case-insensitive match
+                if field in ['transmission', 'colors']: 
+                    # Use regex for partial, case-insensitive match
                     query[field] = {
                         "$in": [re.compile(f".*{re.escape(val)}.*", re.IGNORECASE) for val in values]
                     }
-                if field == 'colors':  # Use regex for partial, case-insensitive match
-                    query[field] = {
-                        "$in": [re.compile(f".*{re.escape(val)}.*", re.IGNORECASE) for val in values]
-                    }
-                if field=='seater':
-                    query[field]={values} 
-                else: 
+                elif field == 'seater':
+                    # Assuming seater is an integer field
+                    query[field] = {"$in": [int(v) for v in values]}
+                else:
                     query[field] = {"$in": values}
-                       
-        
-        # Single-value filters
-        min_price = request.GET.get('min_price')
+
+        # Price filtering
+        min_price = request.GET.get('min_price') 
         max_price = request.GET.get('max_price')
 
         if min_price or max_price:
@@ -45,11 +43,10 @@ class FilterCarsView(APIView):
             if min_price:
                 price_query["$gte"] = int(min_price)
             if max_price:
-                price_query["$lte"] = int(max_price)
+                price_query["$lte"] = int(max_price) 
             
             if price_query:
                 query["price"] = price_query 
-
 
         # Query MongoDB
         data = list(collection.find(query))
@@ -58,8 +55,7 @@ class FilterCarsView(APIView):
         for item in data:
             item['_id'] = str(item['_id'])
 
-        # Serialize
-        serializer = CarSerializer(data, many=True)
+        serializer = CarSerializer(data, many=True) 
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
