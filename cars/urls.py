@@ -14,4 +14,8 @@ urlpatterns = [
     path('car-detail/<int:pk>/', CarDetailView.as_view(), name='car-detail'),
     path('search/', search_cars, name='search-cars'),
     path('statistics/', car_statistics, name='car-statistics'),
+    # Add the order-related URLs
+    path('orders/select/', SelectOrders.as_view(), name='select-orders'),
+    path('orders/submit/', SubmitOrder.as_view(), name='submit-order'),
+    path('orders/display/', DisplayOrders.as_view(), name='display-orders'),
 ]
