@@ -7,7 +7,7 @@ import json
 # todo Database connections :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 client = MongoClient("mongodb://localhost:27017/")
 db=client.cars24
-collection=db.cars 
+collection=db.cars
 
 def mainPage(request):
     return HttpResponse("welcome to main page !!!")
@@ -16,7 +16,7 @@ def carListAPI(request):
     data = collection.find({},{'_id':0})    
     # data = dumps(data,indent=3)  
     data=list(data) 
-    return JsonResponse(data, safe=False) 
+    return JsonResponse(data, safe=False)
 
 def filter_api(request):
     # Get individual parameters from the URL (query string)

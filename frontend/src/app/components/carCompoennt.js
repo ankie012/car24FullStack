@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 import CarList from "./carList";
 import SearchBar from "./carSearch";
 import BudgetFilter from "./budgetFilter";
@@ -12,7 +13,8 @@ import OwnerFilter from "./OwnerFilter";
 import RTOFilter from "./RTOFilter";
 import DiscountFilter from "./DiscountFilter";
 import KmDrivenFilter from "./KmDrivenFilter";
-import Cars from "./carObject";
+// import Cars from "./carObject";
+
 
 const CarComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -27,25 +29,44 @@ const CarComponent = () => {
   const [selectedRTOs, setSelectedRTOs] = useState([]);
   const [selectedDiscount, setSelectedDiscount] = useState(null);
 
+
+  const [Cars, setCars] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/viewapi/')
+      .then(res => {
+        setCars(res.data);
+        console.log('API response:', res.data);
+      })
+      .catch(err => {
+        console.error('Error fetching data:', err);
+      });
+  }, []);
+
+
+console.log('Carsssssss',Cars)
+
+
   const handleBudgetChange = (min, max) => {
     setMinBudget(min);
     setMaxBudget(max);
   };
 
   const filteredCars = Cars.filter((car) => {
+    console.log('hahahahahha',car)
     const carDiscount = parseInt(car.discount); // Convert discount string (e.g., "5%") to a number
 
     return (
-      (car.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (car.model.toLowerCase().includes(searchQuery.toLowerCase()) ||
         car.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        car.modelYear.toString().includes(searchQuery)) &&
+        car.year.toString().includes(searchQuery)) &&
       car.price >= minBudget &&
       car.price <= maxBudget &&
-      (selectedFuels.length === 0 || selectedFuels.includes(car.fuel)) &&
-      (!selectedBodyType || car.bodyType === selectedBodyType) &&
+      (selectedFuels.length === 0 || selectedFuels.includes(car.fuel_type)) &&
+      (!selectedBodyType || car.body_type === selectedBodyType) &&
       (!selectedTransmission || car.transmission === selectedTransmission) &&
-      (!selectedColor || car.color === selectedColor) &&
-      (!selectedSeats || car.seats === selectedSeats) &&
+      (!selectedColor || car.colors === selectedColor) &&
+      (!selectedSeats || car.seater === selectedSeats) &&
       (selectedOwners.length === 0 || selectedOwners.includes(car.owners)) &&
       (selectedRTOs.length === 0 || selectedRTOs.includes(car.RTO)) &&
       (!selectedDiscount || carDiscount >= selectedDiscount) // Filter discount correctly
