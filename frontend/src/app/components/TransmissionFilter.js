@@ -15,11 +15,11 @@ const TransmissionFilter = ({ onTransmissionChange, carData = [] }) => {
     const updatedTransmission = selectedTransmission === type ? null : type;
     setSelectedTransmission(updatedTransmission);
     onTransmissionChange(updatedTransmission);
-  };
+  }; 
   
   // Count cars per transmission type
   const transmissionCounts = transmissions.reduce((acc, { type }) => {
-    acc[type] = carData?.filter((car) => car.transmission === type).length || 0;
+    acc[type] = carData?.filter((car) => car.transmission && car.transmission.includes(type)).length || 0;
     return acc;
   }, {});
 

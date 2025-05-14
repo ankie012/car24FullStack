@@ -22,15 +22,12 @@ const FuelFilter = ({ onFuelChange, carData = [] }) => {
       : [...selectedFuels, fuel];
 
     setSelectedFuels(updatedFuels);
-
-    // Log the updated selected fuels array
-    console.log('Selected Fuels:', updatedFuels);
     onFuelChange(updatedFuels);
   };
 
   // Count cars per fuel type, safely handling undefined carData
   const fuelCounts = fuelOptions.reduce((acc, { value }) => {
-    acc[value] = carData?.filter((car) => car.fuel === value).length || 0;
+    acc[value] = carData?.filter((car) => car.fuel_type && car.fuel_type.includes(value)).length || 0; 
     return acc;
   }, {});
 

@@ -25,7 +25,7 @@ const BudgetFilter = ({ onBudgetChange }) => {
     // Clamp to bounds
     min = Math.max(MIN, min);
     max = Math.min(MAX, max);
-  
+    
     const updatedValues = [min, max];
     setValues(updatedValues);
     console.log("Sending budget range:", min, max);

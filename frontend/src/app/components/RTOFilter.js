@@ -10,8 +10,8 @@ const RTOFilter = ({ onRTOChange, carData = [] }) => {
   const rtoCounts = carData.reduce((acc, car) => {
     acc[car.RTO] = (acc[car.RTO] || 0) + 1;
     return acc;
-  }, {});
-
+  }, {}); 
+  
   const rtoOptions = Object.entries(rtoCounts).map(([rto, count]) => ({ rto, count }));
 
   const handleCheckboxChange = (rto) => {
