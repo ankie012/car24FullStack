@@ -4,12 +4,13 @@ from rest_framework import status
 from .serializers import CarSerializer
 from .serializers import CarCardSerializer
 from pymongo import MongoClient
-import re 
+from bson import ObjectId
+import re
 
 
 # MongoDB connection
 client = MongoClient("mongodb://localhost:27017/")
-db = client.cars_dealership
+db = client.cars24
 collection = db.cars
 
 
@@ -67,4 +68,21 @@ class FilterCarsView(APIView):
 #             item["_id"] = str(item["_id"]) 
 #         serializer=CarCardSerializer(cars,many=True)  
 #         return Response(serializer.data)  
- 
+
+class CarDetailView(APIView):
+    def get(self, request, car_id):
+        try:
+            # Convert string ID to MongoDB ObjectId
+            car = collection.find_one({"_id": ObjectId(car_id)})
+            
+            if not car:
+                return Response({"error": "Car not found"}, status=status.HTTP_404_NOT_FOUND)
+            
+            # Convert ObjectId to string for serialization
+            car['_id'] = str(car['_id'])
+            
+            serializer = CarSerializer(car)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)

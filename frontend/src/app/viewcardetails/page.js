@@ -1,7 +1,60 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import { useSearchParams } from 'next/navigation';
+import axios from 'axios';
 
 const CarDetails = () => {
+  const searchParams = useSearchParams();
+  const carId = searchParams.get('id');
+  const [car, setCar] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCarDetails = async () => {
+      if (!carId) {
+        setError("No car ID provided");
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await axios.get(`http://localhost:8000/cars/${carId}/`);
+        setCar(response.data);
+        setLoading(false);
+      } catch (err) {
+        console.error("Failed to fetch car details:", err);
+        setError("Failed to load car details");
+        setLoading(false);
+      }
+    };
+
+    fetchCarDetails();
+  }, [carId]);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col min-h-screen bg-gray-100 font-sans">
+        <Header />
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-xl">Loading car details...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !car) {
+    return (
+      <div className="flex flex-col min-h-screen bg-gray-100 font-sans">
+        <Header />
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-xl text-red-500">{error || "Car not found"}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 font-sans">
       <Header />
@@ -11,8 +64,8 @@ const CarDetails = () => {
         {/* Left: Image and Tabs */}
         <div className="w-full md:w-3/5">
           <img
-            src="https://media.cars24.com/hello-ar/dev/uploads/6742ab179e921fd52a296cb4/425fbb30-e587-4a6d-bc2d-5b2afbede6a8/slot/10039033787-6717d07cc47d4fdbbc88ed2479edda02-Exterior-7.jpg?w=700&h=403&format=auto"
-            alt="MG Hector"
+            src={`/assets/${car.images}`}
+            alt={`${car.brand} ${car.model}`}
             className="w-full rounded-lg"
           />
           <div className="flex justify-around mt-2 bg-black rounded-lg p-3 text-white">
@@ -50,25 +103,25 @@ const CarDetails = () => {
           <div className="bg-white border rounded-lg p-4 mt-4 space-y-2 shadow-sm">
             <h3 className="text-md font-semibold mb-2">Car overview</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 text-sm text-gray-700">
-              <div><strong>Reg. year</strong><br />Sep 2019</div>
-              <div><strong>Fuel</strong><br />CNG</div>
-              <div><strong>KM driven</strong><br />49,919 km</div>
-              <div><strong>Transmission</strong><br />Manual</div>
-              <div><strong>Engine capacity</strong><br />1197cc</div>
-              <div><strong>Ownership</strong><br />2nd</div>
-              <div><strong>Make year</strong><br />Jun 2019</div>
-              <div><strong>Spare key</strong><br />Yes</div>
-              <div><strong>Reg number</strong><br />DL5C*9425</div>
+              <div><strong>Reg. year</strong><br />{car.year}</div>
+              <div><strong>Fuel</strong><br />{car.fuel_type}</div>
+              <div><strong>KM driven</strong><br />{car.km_driven || "N/A"} {car.km_driven ? "km" : ""}</div>
+              <div><strong>Transmission</strong><br />{car.transmission}</div>
+              <div><strong>Engine capacity</strong><br />{car.engine?.capacity || "N/A"}</div>
+              <div><strong>Ownership</strong><br />{car.Owners?.[0] || "N/A"}</div>
+              <div><strong>Make year</strong><br />{car.year}</div>
+              <div><strong>Spare key</strong><br />{"Yes"}</div>
+              <div><strong>Reg number</strong><br />{"DL5C*****"}</div>
             </div>
           </div>
         </div>
 
         {/* Right: Details */}
         <div className="w-full md:w-2/5 max-w-xl bg-white rounded-lg p-5 shadow-md h-[600px]">
-          <h2 className="text-xl font-bold m-0">2019 Hyundai Grand i10</h2>
-          <h3 className="text-base font-semibold text-gray-600 mt-1">SPORTZ 1.2 KAPPA VTVT</h3>
+          <h2 className="text-xl font-bold m-0">{car.year} {car.brand} {car.model}</h2>
+          <h3 className="text-base font-semibold text-gray-600 mt-1">{car.variant}</h3>
           <p className="text-sm text-gray-600 mt-3 flex justify-between items-center">
-            📍 Gaur City mall, Multilevel parking, Greater Noida
+            📍 {car.location || "Mumbai"}
             <span className="text-orange-500 font-bold cursor-pointer">📞 Call us</span>
           </p>
 
@@ -81,7 +134,7 @@ const CarDetails = () => {
             <div className="flex justify-between items-start">
               <div>
                 <p className="text-xs text-gray-500 mb-1">EMI starts at</p>
-                <p className="text-xl font-bold text-black m-0">₹7,816/mo</p>
+                <p className="text-xl font-bold text-black m-0">₹{car.emi || "7,816"}/mo</p>
               </div>
               <a href="#" className="text-sm font-bold text-black no-underline">Check eligibility →</a>
             </div>
@@ -90,8 +143,12 @@ const CarDetails = () => {
           {/* Price Box */}
           <div className="mt-5 p-4 bg-gray-100 rounded-lg">
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-xl font-bold">₹4 lakh</span>
-              <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded font-bold">₹54.2K OFF</span>
+              <span className="text-xl font-bold">₹{car.price.toLocaleString()} lakh</span>
+              {car.Discount && (
+                <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded font-bold">
+                  ₹{car.Discount} OFF
+                </span>
+              )}
             </div>
             <div className="flex justify-between items-center">
               <p className="text-xs text-gray-500 mt-1">+10,000 other charges</p>
