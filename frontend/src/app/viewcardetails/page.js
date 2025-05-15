@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import TestDriveModal from '../components/TestDriveModal'
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
@@ -10,6 +11,7 @@ const CarDetails = () => {
   const [car, setCar] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -156,9 +158,14 @@ const CarDetails = () => {
             </div>
           </div>
 
-          <button className="w-full mt-5 bg-orange-500 text-white border-none py-4 text-base rounded-lg cursor-pointer hover:bg-orange-600 transition-colors">
-            Book free test drive
-          </button>
+          <button
+  onClick={() => setShowModal(true)}
+  className="w-full mt-5 bg-orange-500 text-white border-none py-4 text-base rounded-lg cursor-pointer hover:bg-orange-600 transition-colors"
+>
+  Book free test drive
+</button>
+
+<TestDriveModal isOpen={showModal} onClose={() => setShowModal(false)} />
         </div>
       </div>
       </div>
