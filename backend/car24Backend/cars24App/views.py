@@ -5,7 +5,8 @@ from .serializers import CarSerializer
 from .serializers import CarCardSerializer
 from pymongo import MongoClient 
 from bson import ObjectId 
-import re 
+import re
+
 
 
 # MongoDB connection
@@ -62,9 +63,14 @@ class FilterCarsView(APIView):
         # Query MongoDB
         data = list(collection.find(query)) 
 
-        # Convert ObjectIds to strings 
+        # Convert ObjectIds to strings and ensure all required fields exist
         for item in data: 
-            item['_id'] = str(item['_id'])  
+            item['_id'] = str(item['_id'])
+            # Add default values for any missing fields required by the serializer
+            if 'Reg_number' not in item:
+                item['Reg_number'] = ""
+            if 'km_driven' not in item:
+                item['km_driven'] = 0
 
         serializer = CarSerializer(data, many=True)   
         return Response(serializer.data, status=status.HTTP_200_OK) 
@@ -82,6 +88,12 @@ class CarDetailView(APIView):
             # Convert ObjectId to string for serialization
             car['_id'] = str(car['_id'])
             
+            # Add default values for any missing fields required by the serializer
+            if 'Reg_number' not in car:
+                car['Reg_number'] = ""
+            if 'km_driven' not in car:
+                car['km_driven'] = 0
+            
             serializer = CarSerializer(car)
             return Response(serializer.data, status=status.HTTP_200_OK)
             
@@ -96,20 +108,5 @@ class CarDetailView(APIView):
 #         serializer=CarCardSerializer(cars,many=True)  
 #         return Response(serializer.data)  
 
-class CarDetailView(APIView):
-    def get(self, request, car_id):
-        try:
-            # Convert string ID to MongoDB ObjectId
-            car = collection.find_one({"_id": ObjectId(car_id)})
-            
-            if not car:
-                return Response({"error": "Car not found"}, status=status.HTTP_404_NOT_FOUND)
-            
-            # Convert ObjectId to string for serialization
-            car['_id'] = str(car['_id'])
-            
-            serializer = CarSerializer(car)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-            
-        except Exception as e:
-            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+# Removing duplicate CarDetailView class
+# The first implementation above will be used
