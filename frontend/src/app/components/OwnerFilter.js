@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const ownerOptions = [
-  { label: "First owner", value: 1, image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/user.svg" } },
-  { label: "Second owner", value: 2, image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/users.svg" } },
-  { label: "Third owner", value: 3, image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/group_users.svg" } },
-  { label: "Fourth owner", value: 4, image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/group_users_for_4.svg" } }
+  { label: "First owner", value: "First owner", image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/user.svg" } },
+  { label: "Second owner", value: "Second owner", image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/users.svg" } },
+  { label: "Third owner", value: "Third owner", image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/group_users.svg" } },
+  { label: "Fourth owner", value: "Fourth owner", image: { url: "https://media.cars24.com/india/buy/facets_v4/icons/v2/group_users_for_4.svg" } }
 ];
 
 const OwnerFilter = ({ onOwnerChange, carData = [] }) => {
@@ -15,17 +15,19 @@ const OwnerFilter = ({ onOwnerChange, carData = [] }) => {
   const handleCheckboxChange = (ownerValue) => {
     const updatedOwners = selectedOwners.includes(ownerValue)
       ? selectedOwners.filter((o) => o !== ownerValue)
-      : [...selectedOwners, ownerValue];
+      : [...selectedOwners, ownerValue]; 
 
     setSelectedOwners(updatedOwners);
     onOwnerChange(updatedOwners);
   };
-
+  
   // Count cars per owner category
+  // car.Owners.includes(value): checks if the current owner (like "First owner") is in the Owners array of that car
   const ownerCounts = ownerOptions.reduce((acc, { value }) => {
-    acc[value] = carData?.filter((car) => car.owners === value).length || 0;
+    acc[value] = carData?.filter((car) => car.Owners && car.Owners.includes(value)).length || 0;
     return acc;
   }, {});
+  
 
   return (
     <div className="border p-4 rounded-lg shadow-sm bg-white">

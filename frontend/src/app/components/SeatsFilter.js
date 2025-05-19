@@ -10,7 +10,7 @@ const seatOptions = [
   { seats: 7, image: { url: "https://media.cars24.com/india/buy/facets_v4/seats/7_Seater.png" } },
   { seats: 8, image: { url: "https://media.cars24.com/india/buy/facets_v4/seats/8_Seater.png" } },
   { seats: 9, image: { url: "https://media.cars24.com/india/buy/facets_v4/seats/9_Seater.png" } }
-];
+]; 
 
 const SeatsFilter = ({ onSeatsChange, carData = [] }) => {
   const [selectedSeats, setSelectedSeats] = useState(null);
@@ -24,7 +24,7 @@ const SeatsFilter = ({ onSeatsChange, carData = [] }) => {
 
   // Count cars per seat number
   const seatCounts = seatOptions.reduce((acc, { seats }) => {
-    acc[seats] = carData?.filter((car) => car.seats === seats).length || 0;
+    acc[seats] = carData?.filter((car) => car.seater === seats).length || 0;
     return acc;
   }, {});
 

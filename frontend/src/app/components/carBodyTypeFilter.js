@@ -19,9 +19,9 @@ const BodyTypeFilter = ({ onBodyTypeChange, carData = [] }) => {
 
   // Count cars per body type
   const bodyTypeCounts = bodyTypes.reduce((acc, { type }) => {
-    acc[type] = carData?.filter((car) => car.bodyType === type).length || 0;
+    acc[type] = carData?.filter((car) => car.body_type && car.body_type.includes(type)).length || 0;
     return acc;
-  }, {});
+  }, {}); 
 
   return (
     <div className="border p-4 rounded-lg shadow-sm bg-white">

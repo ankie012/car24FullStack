@@ -12,7 +12,7 @@ const DiscountFilter = ({ onDiscountChange }) => {
     { label: "20% off or more", value: 20 },
     { label: "EMI discount up to ₹2500/month", value: "emi" },
   ];
-
+   
   const handleRadioChange = (value) => {
     const numericValue = value === "emi" ? value : Number(value); // Convert to number if it's a percentage
     setSelectedDiscount(numericValue);

@@ -13,7 +13,7 @@ const colors = [
   { name: "Green", icon: "https://media.cars24.com/india/buy/facets_v4/colour/green.png" },
   { name: "Yellow", icon: "https://media.cars24.com/india/buy/facets_v4/colour/yellow.png" },
 ];
-
+  
 const ColorFilter = ({ onColorChange, carData = [] }) => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const ColorFilter = ({ onColorChange, carData = [] }) => {
 
   // Count cars per color
   const colorCounts = colors.reduce((acc, { name }) => {
-    acc[name] = carData?.filter((car) => car.color === name).length || 0;
+    acc[name] = carData?.filter((car) => car.colors && car.colors.includes(name)).length || 0;
     return acc;
   }, {});
 

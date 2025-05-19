@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header//Header'; 
 import TestDriveModal from '../components/TestDriveModal'
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
@@ -109,11 +109,11 @@ const CarDetails = () => {
               <div><strong>Fuel</strong><br />{car.fuel_type}</div>
               <div><strong>KM driven</strong><br />{car.km_driven || "N/A"} {car.km_driven ? "km" : ""}</div>
               <div><strong>Transmission</strong><br />{car.transmission}</div>
-              <div><strong>Engine capacity</strong><br />{car.engine?.capacity || "N/A"}</div>
+              <div><strong>Engine capacity</strong><br />{car.engine?.cc || "N/A"}</div>
               <div><strong>Ownership</strong><br />{car.Owners?.[0] || "N/A"}</div>
               <div><strong>Make year</strong><br />{car.year}</div>
               <div><strong>Spare key</strong><br />{"Yes"}</div>
-              <div><strong>Reg number</strong><br />{"DL5C*****"}</div>
+              <div><strong>Reg number</strong><br />{car.Reg_number}</div> 
             </div>
           </div>
         </div>
