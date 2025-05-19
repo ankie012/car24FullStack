@@ -1,0 +1,2468 @@
+[
+  {
+    "brand": "Hyundai",
+    "model": "Tucson",
+    "variant": "Limited AWD",
+    "fuel_type": "Gasoline",
+    "transmission": "8-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-01",
+    "reg_number": "BR07 FM 5730",
+    "price": 1789000,
+    "km_driven": 3694,
+    "seater": 5,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Titan Black",
+    "static_features": [
+      "Adaptive Cruise Control",
+      "Keyless Entry and Start",
+      "Remote Trunk Release",
+      "Bucket Seats",
+      "Digital Instrument Cluster",
+      "Wireless Charging Pad",
+      "Advanced Infotainment System"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376152"
+      },
+      "hp": 177,
+      "cc": 2499,
+      "torque": "178 lb-ft",
+      "mileage": {
+        "city": 25,
+        "highway": 29
+      },
+      "ground_clearance_mm": 171
+    },
+    "images": "Hyundai_tuscon_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb702"
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Tucson",
+    "variant": "Limited AWD",
+    "fuel_type": "Diesel",
+    "transmission": "8-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-12",
+    "reg_number": "TN50 IL 2856",
+    "price": 67890,
+    "km_driven": 140323,
+    "seater": 5,
+    "year": 2016,
+    "discount": "10% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": " Phantom white",
+    "static_features": [
+      "Adaptive Cruise Control",
+      "Keyless Entry and Start",
+      "Remote Trunk Release",
+      "Bucket Seats",
+      "Digital Instrument Cluster",
+      "Wireless Charging Pad",
+      "Advanced Infotainment System"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376161"
+      },
+      "hp": 187,
+      "cc": 2497,
+      "torque": "178 lb-ft",
+      "mileage": {
+        "city": 24,
+        "highway": 29
+      },
+      "ground_clearance_mm": 172
+    },
+    "images": "Hyundai_tuscon_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb703"
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Venue",
+    "variant": "Limited",
+    "fuel_type": "Gasoline",
+    "transmission": "Intelligent Variable Transmission (IVT)",
+    "body_type": "SUV",
+    "rto": "MH-03",
+    "reg_number": "KA37 EY 8057",
+    "price": 794000,
+    "km_driven": 27232,
+    "seater": 5,
+    "year": 2023,
+    "discount": "20% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Titan Grey",
+    "static_features": [
+      "Forward Collision-Avoidance Assist with Pedestrian Detection",
+      "Lane Keeping Assist",
+      "Driver Attention Warning",
+      "8-inch color touchscreen display audio",
+      "Wireless Apple CarPlay and Android Auto",
+      "Rear View Monitor with parking guidance"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376167"
+      },
+      "hp": 121,
+      "cc": 1592,
+      "torque": "113 lb-ft",
+      "mileage": {
+        "city": 29,
+        "highway": 33
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Hyundai_venue_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb704"
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Venue",
+    "variant": "Limited",
+    "fuel_type": "Gasoline",
+    "transmission": "Intelligent Variable Transmission (IVT)",
+    "body_type": "SUV",
+    "rto": "MH-15",
+    "reg_number": "UP66 KK 9722",
+    "price": 795000,
+    "km_driven": 5290,
+    "seater": 6,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Titan white",
+    "static_features": [
+      "Forward Collision-Avoidance Assist with Pedestrian Detection",
+      "Lane Keeping Assist",
+      "Driver Attention Warning",
+      "8-inch color touchscreen display audio",
+      "Wireless Apple CarPlay and Android Auto",
+      "Rear View Monitor with parking guidance"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376173"
+      },
+      "hp": 123,
+      "cc": 1588,
+      "torque": "113 lb-ft",
+      "mileage": {
+        "city": 29,
+        "highway": 34
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Hyundai_venue_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb705"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Innova Crysta",
+    "variant": "ZX AT Diesel",
+    "fuel_type": "Petrol",
+    "transmission": "6-speed Automatic",
+    "body_type": "MPV",
+    "rto": "MH-08",
+    "reg_number": "MH93 HD 3920",
+    "price": 2852000,
+    "km_driven": 34259,
+    "seater": 6,
+    "year": 2023,
+    "discount": "5% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Garnet Red",
+    "static_features": [
+      "Captain Seats",
+      "Wooden Interior Trim",
+      "7-inch Touchscreen Infotainment",
+      "Rear AC Vents",
+      "Multi-zone Climate Control",
+      "Ambient Lighting"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376179"
+      },
+      "hp": 150,
+      "cc": 2396,
+      "torque": "341 Nm",
+      "mileage": {
+        "city": 13,
+        "highway": 16.2
+      },
+      "ground_clearance_mm": 178
+    },
+    "images": "Toyota_innova_crysta_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb706"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Innova Crysta",
+    "variant": "ZX AT Diesel",
+    "fuel_type": "Diesel",
+    "transmission": "7-speed Automatic",
+    "body_type": "MPV",
+    "rto": "MH-07",
+    "reg_number": "AP13 GU 1553",
+    "price": 2850000,
+    "km_driven": 93948,
+    "seater": 7,
+    "year": 2016,
+    "discount": "15% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Garnet  Black",
+    "static_features": [
+      "Captain Seats",
+      "Wooden Interior Trim",
+      "7-inch Touchscreen Infotainment",
+      "Rear AC Vents",
+      "Multi-zone Climate Control",
+      "Ambient Lighting"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376186"
+      },
+      "hp": 150,
+      "cc": 2393,
+      "torque": "343 Nm",
+      "mileage": {
+        "city": 13,
+        "highway": 16.2
+      },
+      "ground_clearance_mm": 178
+    },
+    "images": "Toyota_innova_crysta_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb707"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Innova Crysta",
+    "variant": "ZX AT Diesel",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "MPV",
+    "rto": "MH-01",
+    "reg_number": "AP39 WT 1030",
+    "price": 2850000,
+    "km_driven": 33410,
+    "seater": 7,
+    "year": 2021,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Silver Metallic",
+    "static_features": [
+      "Captain Seats",
+      "Wooden Interior Trim",
+      "7-inch Touchscreen Infotainment",
+      "Rear AC Vents",
+      "Multi-zone Climate Control",
+      "Ambient Lighting"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037618a"
+      },
+      "hp": 150,
+      "cc": 2392,
+      "torque": "353 Nm",
+      "mileage": {
+        "city": 13,
+        "highway": 17.2
+      },
+      "ground_clearance_mm": 178
+    },
+    "images": "Toyota_innova_crysta_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb708"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux",
+    "variant": "High AT 4x4",
+    "fuel_type": "CNG",
+    "transmission": "6-speed Automatic",
+    "body_type": "Pickup Truck",
+    "rto": "MH-04",
+    "reg_number": "TN01 FX 9070",
+    "price": 3657000,
+    "km_driven": 48877,
+    "seater": 5,
+    "year": 2022,
+    "discount": "10% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Super White",
+    "static_features": [
+      "Off-road Driving Modes",
+      "8-inch Infotainment Display",
+      "Dual-Zone Climate Control",
+      "Leather Upholstery",
+      "Electronic Differential Lock",
+      "Reverse Parking Camera"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037618d"
+      },
+      "hp": 204,
+      "cc": 2760,
+      "torque": "520 Nm",
+      "mileage": {
+        "city": 9.8,
+        "highway": 12.5
+      },
+      "ground_clearance_mm": 217
+    },
+    "images": "Toyota_hilux_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb709"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux",
+    "variant": "High AT 4x4",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Pickup Truck",
+    "rto": "MH-05",
+    "reg_number": "MH13 FM 2731",
+    "price": 3652000,
+    "km_driven": 3254,
+    "seater": 5,
+    "year": 2025,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Platinum Pearl White",
+    "static_features": [
+      "Off-road Driving Modes",
+      "8-inch Infotainment Display",
+      "Dual-Zone Climate Control",
+      "Leather Upholstery",
+      "Electronic Differential Lock",
+      "Reverse Parking Camera"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376199"
+      },
+      "hp": 204,
+      "cc": 2755,
+      "torque": "500 Nm",
+      "mileage": {
+        "city": 9.8,
+        "highway": 12.5
+      },
+      "ground_clearance_mm": 216
+    },
+    "images": "Toyota_hilux_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70a"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux",
+    "variant": "High AT 4x4",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Pickup Truck",
+    "rto": "MH-08",
+    "reg_number": "TN73 JQ 0007",
+    "price": 3650000,
+    "km_driven": 25861,
+    "seater": 6,
+    "year": 2023,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Super grey",
+    "static_features": [
+      "Off-road Driving Modes",
+      "7-inch Infotainment Display",
+      "Dual-Zone Climate Control",
+      "Leather Upholstery",
+      "Electronic Differential Lock",
+      "Reverse Parking Camera"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037619c"
+      },
+      "hp": 214,
+      "cc": 2758,
+      "torque": "510 Nm",
+      "mileage": {
+        "city": 9.8,
+        "highway": 12.5
+      },
+      "ground_clearance_mm": 216
+    },
+    "images": "Toyota_hilux_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70b"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Fortuner",
+    "variant": "Legender 4x4 AT",
+    "fuel_type": "Diesel",
+    "transmission": "7-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-04",
+    "reg_number": "DL04 HH 0779",
+    "price": 5220000,
+    "km_driven": 33096,
+    "seater": 7,
+    "year": 2022,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Pearl White",
+    "static_features": [
+      "Ventilated Seats",
+      "9-inch Touchscreen Infotainment",
+      "Connected Car Tech",
+      "Wireless Charging",
+      "360-degree Camera",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761a0"
+      },
+      "hp": 204,
+      "cc": 2755,
+      "torque": "500 Nm",
+      "mileage": {
+        "city": 10.2,
+        "highway": 14.5
+      },
+      "ground_clearance_mm": 228
+    },
+    "images": "Toyota_fortuner_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70c"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Fortuner",
+    "variant": "Legender 4x4 AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-12",
+    "reg_number": "AP44 OH 3518",
+    "price": 5210000,
+    "km_driven": 32554,
+    "seater": 7,
+    "year": 2021,
+    "discount": "5% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Attitude Black",
+    "static_features": [
+      "Ventilated Seats",
+      "8.5-inch Touchscreen Infotainment",
+      "Connected Car Tech",
+      "Wireless Charging",
+      "360-degree Camera",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761a9"
+      },
+      "hp": 208,
+      "cc": 2775,
+      "torque": "500 Nm",
+      "mileage": {
+        "city": 10.2,
+        "highway": 14.4
+      },
+      "ground_clearance_mm": 225
+    },
+    "images": "Toyota_fortuner_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70d"
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Fortuner",
+    "variant": "Legender 4x4 AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-01",
+    "reg_number": "GJ56 DF 2745",
+    "price": 5200000,
+    "km_driven": 4480,
+    "seater": 7,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Sparkling Black Crystal Shine",
+    "static_features": [
+      "Ventilated Seats",
+      "9-inch Touchscreen Infotainment",
+      "Connected Car Tech",
+      "Wireless Charging",
+      "360-degree Camera",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761ac"
+      },
+      "hp": 204,
+      "cc": 2755,
+      "torque": "500 Nm",
+      "mileage": {
+        "city": 10.2,
+        "highway": 14.4
+      },
+      "ground_clearance_mm": 225
+    },
+    "images": "Toyota_fortuner_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70e"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Tiago",
+    "variant": "XZ+ Dual Tone",
+    "fuel_type": "Petrol",
+    "transmission": "6-speed Manual",
+    "body_type": "Hatchback",
+    "rto": "MH-05",
+    "reg_number": "AP53 WQ 3173",
+    "price": 787000,
+    "km_driven": 8297,
+    "seater": 5,
+    "year": 2024,
+    "discount": "15% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Midnight Plum",
+    "static_features": [
+      "7-inch Harman Infotainment",
+      "Dual Front Airbags",
+      "Cooled Glovebox",
+      "Auto AC",
+      "Reverse Camera",
+      "Flat-bottom Steering"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761b0"
+      },
+      "hp": 86,
+      "cc": 1199,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 19.7,
+        "highway": 23.5
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Tata_tiago_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb70f"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Tiago",
+    "variant": "XZ+ Dual Tone",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed Manual",
+    "body_type": "Hatchback",
+    "rto": "MH-15",
+    "reg_number": "GJ91 GT 2525",
+    "price": 785000,
+    "km_driven": 35872,
+    "seater": 5,
+    "year": 2018,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Flame Red",
+    "static_features": [
+      "7-inch Harman Infotainment",
+      "Dual Front Airbags",
+      "Cooled Glovebox",
+      "Auto AC",
+      "Reverse Camera",
+      "Flat-bottom Steering"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761bb"
+      },
+      "hp": 86,
+      "cc": 1179,
+      "torque": "114 Nm",
+      "mileage": {
+        "city": 19.8,
+        "highway": 23.5
+      },
+      "ground_clearance_mm": 177
+    },
+    "images": "Tata_tiago_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb710"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Safari",
+    "variant": "Accomplished Plus AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-14",
+    "reg_number": "BR45 OM 8012",
+    "price": 2505000,
+    "km_driven": 7619,
+    "seater": 6,
+    "year": 2024,
+    "discount": "5% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Tropical Mist",
+    "static_features": [
+      "Captain Seats",
+      "14-inch Digital Display",
+      "360-degree Camera",
+      "ADAS Level 2",
+      "Ventilated Front & Rear Seats",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761bf"
+      },
+      "hp": 176,
+      "cc": 1958,
+      "torque": "350 Nm",
+      "mileage": {
+        "city": 14.5,
+        "highway": 17
+      },
+      "ground_clearance_mm": 205
+    },
+    "images": "Tata_safari_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb711"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Safari",
+    "variant": "Accomplished Plus AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-12",
+    "reg_number": "KA11 DS 3792",
+    "price": 2430000,
+    "km_driven": 90838,
+    "seater": 6,
+    "year": 2018,
+    "discount": "5% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "White Gold",
+    "static_features": [
+      "Captain Seats",
+      "14-inch Digital Display",
+      "360-degree Camera",
+      "ADAS Level 2",
+      "Ventilated Front & Rear Seats",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761c6"
+      },
+      "hp": 170,
+      "cc": 1966,
+      "torque": "350 Nm",
+      "mileage": {
+        "city": 14.5,
+        "highway": 18
+      },
+      "ground_clearance_mm": 205
+    },
+    "images": "Tata_safari_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb712"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Safari",
+    "variant": "Accomplished Plus AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-15",
+    "reg_number": "BR32 XB 1853",
+    "price": 2500000,
+    "km_driven": 3717,
+    "seater": 6,
+    "year": 2025,
+    "discount": "20% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Oberon Black",
+    "static_features": [
+      "Captain Seats",
+      "14-inch Digital Display",
+      "360-degree Camera",
+      "ADAS Level 2",
+      "Ventilated Front & Rear Seats",
+      "Electric Tailgate"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761c8"
+      },
+      "hp": 170,
+      "cc": 1966,
+      "torque": "350 Nm",
+      "mileage": {
+        "city": 14.5,
+        "highway": 17
+      },
+      "ground_clearance_mm": 209
+    },
+    "images": "Tata_safari_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb713"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Punch",
+    "variant": "Creative AMT",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed AMT",
+    "body_type": "Micro SUV",
+    "rto": "MH-07",
+    "reg_number": "UP02 JX 7534",
+    "price": 965000,
+    "km_driven": 5600,
+    "seater": 5,
+    "year": 2025,
+    "discount": "15% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Orcus Blue",
+    "static_features": [
+      "7-inch Harman Infotainment",
+      "Projector Headlamps",
+      "Traction Modes",
+      "Dual Airbags",
+      "Reverse Parking Camera",
+      "Flat-bottom Steering"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761cb"
+      },
+      "hp": 86,
+      "cc": 1199,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 19,
+        "highway": 22
+      },
+      "ground_clearance_mm": 187
+    },
+    "images": "Tata_punch_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb714"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Nexon",
+    "variant": "Fearless Plus DCA",
+    "fuel_type": "Petrol",
+    "transmission": "7-speed DCA",
+    "body_type": "Compact SUV",
+    "rto": "MH-04",
+    "reg_number": "TN39 EH 2173",
+    "price": 1450000,
+    "km_driven": 5846,
+    "seater": 5,
+    "year": 2025,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Daytona Blue",
+    "static_features": [
+      "10.25-inch Digital Cluster",
+      "Ventilated Seats",
+      "Wireless Android Auto & Apple CarPlay",
+      "360-degree Camera",
+      "ADAS Features",
+      "Rain-Sensing Wipers"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761d4"
+      },
+      "hp": 127,
+      "cc": 1199,
+      "torque": "170 Nm",
+      "mileage": {
+        "city": 18.5,
+        "highway": 22.1
+      },
+      "ground_clearance_mm": 209
+    },
+    "images": "Tata_nexon_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb715"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Nexon",
+    "variant": "Fearless Plus DCA",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed DCA",
+    "body_type": "Compact SUV",
+    "rto": "MH-06",
+    "reg_number": "AP08 QG 4873",
+    "price": 1270000,
+    "km_driven": 16615,
+    "seater": 5,
+    "year": 2024,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Daytona Grey",
+    "static_features": [
+      "10.25-inch Digital Cluster",
+      "Ventilated Seats",
+      "Wireless Android Auto & Apple CarPlay",
+      "360-degree Camera",
+      "ADAS Features",
+      "Rain-Sensing Wipers"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761dd"
+      },
+      "hp": 130,
+      "cc": 1199,
+      "torque": "170 Nm",
+      "mileage": {
+        "city": 18.5,
+        "highway": 22.1
+      },
+      "ground_clearance_mm": 209
+    },
+    "images": "Tata_nexon_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb716"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Curvv",
+    "variant": "EV Long Range",
+    "fuel_type": "Electric",
+    "transmission": "Automatic",
+    "body_type": "Coupe SUV",
+    "rto": "MH-14",
+    "reg_number": "BR82 UW 7974",
+    "price": 2200000,
+    "km_driven": 5785,
+    "seater": 5,
+    "year": 2025,
+    "discount": "15% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Signature Red",
+    "static_features": [
+      "Panoramic Sunroof",
+      "Connected Car Tech",
+      "Dual Digital Screens",
+      "Adaptive Cruise Control",
+      "360-degree Camera",
+      "Regenerative Braking"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761e2"
+      },
+      "hp": 250,
+      "cc": 2120,
+      "torque": "300 Nm",
+      "mileage": {
+        "city": 450,
+        "highway": 500
+      },
+      "ground_clearance_mm": 200
+    },
+    "images": "Tata_curvv_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb717"
+    }
+  },
+  {
+    "brand": "Tata",
+    "model": "Curvv",
+    "variant": "EV Long Range",
+    "fuel_type": "Electric",
+    "transmission": "Automatic",
+    "body_type": "Coupe SUV",
+    "rto": "MH-07",
+    "reg_number": "MH34 LE 2136",
+    "price": 2200000,
+    "km_driven": 4957,
+    "seater": 5,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Midnight Black",
+    "static_features": [
+      "Panoramic Sunroof",
+      "Connected Car Tech",
+      "Dual Digital Screens",
+      "Adaptive Cruise Control",
+      "360-degree Camera",
+      "Regenerative Braking"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761eb"
+      },
+      "hp": 250,
+      "cc": null,
+      "torque": "300 Nm",
+      "mileage": {
+        "city": 450,
+        "highway": 500
+      },
+      "ground_clearance_mm": 210
+    },
+    "images": "Tata_curvv_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb718"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Swift",
+    "variant": "ZXi Plus Dual Tone",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed Manual",
+    "body_type": "Hatchback",
+    "rto": "MH-05",
+    "reg_number": "UP40 GO 3257",
+    "price": 890000,
+    "km_driven": 17711,
+    "seater": 5,
+    "year": 2024,
+    "discount": "20% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Midnight Blue",
+    "static_features": [
+      "LED DRLs & Projector Headlamps",
+      "SmartPlay Studio Infotainment",
+      "Auto Foldable ORVMs",
+      "Sporty Flat-bottom Steering Wheel",
+      "Rear Wiper & Defogger",
+      "Dual Front Airbags"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761ef"
+      },
+      "hp": 89,
+      "cc": 1197,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 21,
+        "highway": 23.5
+      },
+      "ground_clearance_mm": 163
+    },
+    "images": "Maruti_swift_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb719"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Swift",
+    "variant": "ZXi Plus Dual Tone",
+    "fuel_type": "Diesel",
+    "transmission": "5-speed Manual",
+    "body_type": "Hatchback",
+    "rto": "MH-14",
+    "reg_number": "BR02 ZU 5189",
+    "price": 885000,
+    "km_driven": 20184,
+    "seater": 5,
+    "year": 2023,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Solid Fire Red",
+    "static_features": [
+      "LED DRLs & Projector Headlamps",
+      "SmartPlay Studio Infotainment",
+      "Auto Foldable ORVMs",
+      "Sporty Flat-bottom Steering Wheel",
+      "Rear Wiper & Defogger",
+      "Dual Front Airbags"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761ef"
+      },
+      "hp": 89,
+      "cc": 1197,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 21,
+        "highway": 23.5
+      },
+      "ground_clearance_mm": 163
+    },
+    "images": "Maruti_swift_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71a"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Dzire",
+    "variant": "ZXi AGS",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed AMT",
+    "body_type": "Sedan",
+    "rto": "MH-07",
+    "reg_number": "DL99 KX 1556",
+    "price": 975000,
+    "km_driven": 1979,
+    "seater": 7,
+    "year": 2025,
+    "discount": "20% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Oxford Blue",
+    "static_features": [
+      "7-inch Touchscreen Infotainment",
+      "Rear AC Vents",
+      "LED Projector Headlamps",
+      "Auto Climate Control",
+      "Smart Keyless Entry",
+      "ABS with EBD"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb703761f9"
+      },
+      "hp": 89,
+      "cc": 1197,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 20.5,
+        "highway": 24.1
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Maruti_dzire_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71b"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Brezza",
+    "variant": "ZXi Plus AT",
+    "fuel_type": "Petrol",
+    "transmission": "6-speed Automatic",
+    "body_type": "Compact SUV",
+    "rto": "MH-12",
+    "reg_number": "BR42 EU 1836",
+    "price": 1370000,
+    "km_driven": 5174,
+    "seater": 5,
+    "year": 2025,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Brave Khaki Black",
+    "static_features": [
+      "Electric Sunroof",
+      "Wireless Android Auto & Apple CarPlay",
+      "Head-Up Display",
+      "6 Airbags",
+      "Connected Car Features",
+      "Rear Parking Sensors"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376202"
+      },
+      "hp": 103,
+      "cc": 1462,
+      "torque": "137 Nm",
+      "mileage": {
+        "city": 18,
+        "highway": 20.5
+      },
+      "ground_clearance_mm": 198
+    },
+    "images": "Maruti_brezza_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71c"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Brezza",
+    "variant": "ZXi Plus AT",
+    "fuel_type": "Petrol",
+    "transmission": "6-speed Automatic",
+    "body_type": "Compact SUV",
+    "rto": "MH-01",
+    "reg_number": "GJ08 QS 6337",
+    "price": 1380000,
+    "km_driven": 57130,
+    "seater": 5,
+    "year": 2021,
+    "discount": "10% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Magma Red",
+    "static_features": [
+      "Electric Sunroof",
+      "Wireless Android Auto & Apple CarPlay",
+      "Head-Up Display",
+      "6 Airbags",
+      "Connected Car Features",
+      "Rear Parking Sensors"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376202"
+      },
+      "hp": 103,
+      "cc": 1462,
+      "torque": "137 Nm",
+      "mileage": {
+        "city": 18,
+        "highway": 20.5
+      },
+      "ground_clearance_mm": 198
+    },
+    "images": "Maruti_brezza_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71d"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Brezza",
+    "variant": "ZXi Plus AT",
+    "fuel_type": "Petrol",
+    "transmission": "6-speed Automatic",
+    "body_type": "Compact SUV",
+    "rto": "MH-12",
+    "reg_number": "TN58 GZ 4282",
+    "price": 1370000,
+    "km_driven": 32123,
+    "seater": 5,
+    "year": 2020,
+    "discount": "5% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Pearl Arctic Red",
+    "static_features": [
+      "Electric Sunroof",
+      "Wireless Android Auto & Apple CarPlay",
+      "Head-Up Display",
+      "6 Airbags",
+      "Connected Car Features",
+      "Rear Parking Sensors"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037620b"
+      },
+      "hp": 113,
+      "cc": 1468,
+      "torque": "147 Nm",
+      "mileage": {
+        "city": 18,
+        "highway": 20.5
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Maruti_brezza_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71e"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Baleno",
+    "variant": "Zeta AMT",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed Automatic",
+    "body_type": "Hatchback",
+    "rto": "MH-15",
+    "reg_number": "BR19 DY 5455",
+    "price": 965000,
+    "km_driven": 5711,
+    "seater": 6,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Arctic White",
+    "static_features": [
+      "9-inch SmartPlay Pro+ Infotainment",
+      "Head-Up Display",
+      "360-degree Camera",
+      "Rear AC Vents",
+      "Cruise Control",
+      "UV-Cut Glass"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037620e"
+      },
+      "hp": 90,
+      "cc": 1197,
+      "torque": "113 Nm",
+      "mileage": {
+        "city": 19.5,
+        "highway": 22.9
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Maruti_baleno_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb71f"
+    }
+  },
+  {
+    "brand": "Maruti Suzuki",
+    "model": "Baleno",
+    "variant": "Zeta AMT",
+    "fuel_type": "Petrol",
+    "transmission": "5-speed Automatic",
+    "body_type": "Hatchback",
+    "rto": "MH-04",
+    "reg_number": "GJ34 VJ 6967",
+    "price": 985000,
+    "km_driven": 61047,
+    "seater": 6,
+    "year": 2017,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Opulent Silver",
+    "static_features": [
+      "9-inch SmartPlay Pro+ Infotainment",
+      "Head-Up Display",
+      "360-degree Camera",
+      "Rear AC Vents",
+      "Cruise Control",
+      "UV-Cut Glass"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376215"
+      },
+      "hp": 90,
+      "cc": 1199,
+      "torque": "123 Nm",
+      "mileage": {
+        "city": 19.5,
+        "highway": 22.9
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Maruti_baleno_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb720"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Bolero",
+    "variant": "B6 Opt",
+    "fuel_type": "Diesel",
+    "transmission": "5-speed Manual",
+    "body_type": "SUV",
+    "rto": "MH-12",
+    "reg_number": "GJ71 LD 5279",
+    "price": 1085000,
+    "km_driven": 3403,
+    "seater": 7,
+    "year": 2025,
+    "discount": "5% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Lakeside Brown",
+    "static_features": [
+      "Digital Instrument Cluster",
+      "Micro-Hybrid Technology",
+      "Keyless Entry",
+      "Power Steering",
+      "Manual AC",
+      "Rear Parking Sensors"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376219"
+      },
+      "hp": 76,
+      "cc": 1493,
+      "torque": "210 Nm",
+      "mileage": {
+        "city": 15,
+        "highway": 16.7
+      },
+      "ground_clearance_mm": 180
+    },
+    "images": "Mahindra_bolero_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb721"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Bolero",
+    "variant": "B6 Opt",
+    "fuel_type": "Diesel",
+    "transmission": "5-speed Manual",
+    "body_type": "SUV",
+    "rto": "MH-01",
+    "reg_number": "TN31 NE 0394",
+    "price": 1185000,
+    "km_driven": 96551,
+    "seater": 7,
+    "year": 2019,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Diamond White",
+    "static_features": [
+      "Digital Instrument Cluster",
+      "Micro-Hybrid Technology",
+      "Keyless Entry",
+      "Power Steering",
+      "Manual AC",
+      "Rear Parking Sensors"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376220"
+      },
+      "hp": 75,
+      "cc": 1493,
+      "torque": "210 Nm",
+      "mileage": {
+        "city": 15,
+        "highway": 16.7
+      },
+      "ground_clearance_mm": 180
+    },
+    "images": "Mahindra_bolero_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb722"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Thar",
+    "variant": "LX Hard Top Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Off-Road SUV",
+    "rto": "MH-06",
+    "reg_number": "DL29 SR 1206",
+    "price": 1750000,
+    "km_driven": 59573,
+    "seater": 4,
+    "year": 2021,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Everest Yellow",
+    "static_features": [
+      "4x4 Drivetrain",
+      "Removable Roof Panels",
+      "Touchscreen Infotainment",
+      "ESP with Roll-over Mitigation",
+      "Cruise Control",
+      "All-Terrain Tyres"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376223"
+      },
+      "hp": 130,
+      "cc": 2184,
+      "torque": "300 Nm",
+      "mileage": {
+        "city": 12,
+        "highway": 15.2
+      },
+      "ground_clearance_mm": 231
+    },
+    "images": "Mahindra_thar_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb723"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Thar",
+    "variant": "LX Hard Top Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Off-Road SUV",
+    "rto": "MH-14",
+    "reg_number": "BR96 WW 6369",
+    "price": 1850000,
+    "km_driven": 1740,
+    "seater": 4,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Everest Black",
+    "static_features": [
+      "4x4 Drivetrain",
+      "Removable Roof Panels",
+      "Touchscreen Infotainment",
+      "ESP with Roll-over Mitigation",
+      "Cruise Control",
+      "All-Terrain Tyres"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037622c"
+      },
+      "hp": 130,
+      "cc": 2184,
+      "torque": "300 Nm",
+      "mileage": {
+        "city": 12,
+        "highway": 15.2
+      },
+      "ground_clearance_mm": 226
+    },
+    "images": "Mahindra_thar_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb724"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Thar",
+    "variant": "LX Hard Top Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Off-Road SUV",
+    "rto": "MH-05",
+    "reg_number": "BR34 CI 3866",
+    "price": 1750000,
+    "km_driven": 4726,
+    "seater": 4,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Red Rage",
+    "static_features": [
+      "4x4 Drivetrain",
+      "Removable Roof Panels",
+      "Touchscreen Infotainment",
+      "ESP with Roll-over Mitigation",
+      "Cruise Control",
+      "All-Terrain Tyres"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037622e"
+      },
+      "hp": 130,
+      "cc": 2184,
+      "torque": "310 Nm",
+      "mileage": {
+        "city": 12,
+        "highway": 15.2
+      },
+      "ground_clearance_mm": 226
+    },
+    "images": "Mahindra_thar_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb725"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "Thar",
+    "variant": "LX Hard Top Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "Off-Road SUV",
+    "rto": "MH-03",
+    "reg_number": "GJ05 MG 4056",
+    "price": 1750000,
+    "km_driven": 1046,
+    "seater": 4,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Napoli Black",
+    "static_features": [
+      "4x4 Drivetrain",
+      "Removable Roof Panels",
+      "Touchscreen Infotainment",
+      "ESP with Roll-over Mitigation",
+      "Cruise Control",
+      "All-Terrain Tyres"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376230"
+      },
+      "hp": 130,
+      "cc": 2184,
+      "torque": "300 Nm",
+      "mileage": {
+        "city": 12,
+        "highway": 14.2
+      },
+      "ground_clearance_mm": 225
+    },
+    "images": "Mahindra_thar_4.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb726"
+    }
+  },
+  {
+    "brand": "Mahindra",
+    "model": "XUV700",
+    "variant": "AX7 Luxury Pack Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-06",
+    "reg_number": "UP94 ZG 4500",
+    "price": 2499000,
+    "km_driven": 28173,
+    "seater": 7,
+    "year": 2023,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Dazzling Red",
+    "static_features": [
+      "ADAS Level-2",
+      "Panoramic Sunroof",
+      "Dual 10.25-inch Screens",
+      "360-degree Camera",
+      "Bose Sound System",
+      "Wireless Charging"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376233"
+      },
+      "hp": 185,
+      "cc": 2198,
+      "torque": "450 Nm",
+      "mileage": {
+        "city": 14,
+        "highway": 17.5
+      },
+      "ground_clearance_mm": 200
+    },
+    "images": "Mahindra_xuv_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb727"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "EV9",
+    "variant": "GT-Line AWD",
+    "fuel_type": "Electric",
+    "transmission": "Single-Speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-15",
+    "reg_number": "DL16 RO 8820",
+    "price": 7200000,
+    "km_driven": 3860,
+    "seater": 6,
+    "year": 2025,
+    "discount": "20% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Ocean Blue",
+    "static_features": [
+      "Dual 12.3-inch Infotainment Screens",
+      "Autonomous Driving Assist",
+      "19-speaker Meridian Sound System",
+      "Solar Roof Panel",
+      "Digital Rearview Mirror",
+      "Wireless Apple CarPlay & Android Auto"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037623b"
+      },
+      "hp": 389,
+      "cc": 2190,
+      "torque": "700 Nm",
+      "mileage": {
+        "city": 450,
+        "highway": 490
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Kia_ev9_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb728"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "EV9",
+    "variant": "GT-Line AWD",
+    "fuel_type": "Electric",
+    "transmission": "Single-Speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-03",
+    "reg_number": "AP94 LN 7220",
+    "price": 7500000,
+    "km_driven": 18912,
+    "seater": 6,
+    "year": 2024,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Ocean Blue",
+    "static_features": [
+      "Dual 12.3-inch Infotainment Screens",
+      "Autonomous Driving Assist",
+      "19-speaker Meridian Sound System",
+      "Solar Roof Panel",
+      "Digital Rearview Mirror",
+      "Wireless Apple CarPlay & Android Auto"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376245"
+      },
+      "hp": 379,
+      "cc": 2269,
+      "torque": "700 Nm",
+      "mileage": {
+        "city": 450,
+        "highway": 480
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Kia_ev9_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb729"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "EV9",
+    "variant": "GT-Line AWD",
+    "fuel_type": "Electric",
+    "transmission": "Single-Speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-14",
+    "reg_number": "TN41 IL 1312",
+    "price": 7300500,
+    "km_driven": 20026,
+    "seater": 6,
+    "year": 2023,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Ocean Blue",
+    "static_features": [
+      "Dual 12.3-inch Infotainment Screens",
+      "Autonomous Driving Assist",
+      "19-speaker Meridian Sound System",
+      "Solar Roof Panel",
+      "Digital Rearview Mirror",
+      "Wireless Apple CarPlay & Android Auto"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376246"
+      },
+      "hp": 379,
+      "cc": null,
+      "torque": "710 Nm",
+      "mileage": {
+        "city": 450,
+        "highway": 480
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Kia_ev9_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72a"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Seltos",
+    "variant": "GTX Plus Turbo DCT",
+    "fuel_type": "Diesel",
+    "transmission": "7-speed DCT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-04",
+    "reg_number": "GJ27 YB 0876",
+    "price": 1975000,
+    "km_driven": 1947,
+    "seater": 5,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Gravity Grey",
+    "static_features": [
+      "Panoramic Sunroof",
+      "ADAS Level-2",
+      "Bose 8-speaker Sound System",
+      "10.25-inch Digital Cluster",
+      "360-degree Camera",
+      "Ventilated Front Seats"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376248"
+      },
+      "hp": 160,
+      "cc": 1497,
+      "torque": "253 Nm",
+      "mileage": {
+        "city": 17,
+        "highway": 20.7
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Kia_seltos_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72b"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Seltos",
+    "variant": "GTX Plus Turbo DCT",
+    "fuel_type": "Petrol",
+    "transmission": "7-speed DCT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-03",
+    "reg_number": "KA78 MI 6213",
+    "price": 1875000,
+    "km_driven": 5069,
+    "seater": 5,
+    "year": 2025,
+    "discount": "15% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Intense Silver",
+    "static_features": [
+      "Panoramic Sunroof",
+      "ADAS Level-2",
+      "Bose 8-speaker Sound System",
+      "10.25-inch Digital Cluster",
+      "360-degree Camera",
+      "Ventilated Front Seats"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376248"
+      },
+      "hp": 160,
+      "cc": 1497,
+      "torque": "253 Nm",
+      "mileage": {
+        "city": 17,
+        "highway": 20.7
+      },
+      "ground_clearance_mm": 190
+    },
+    "images": "Kia_seltos_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72c"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Seltos",
+    "variant": "GTX Plus Turbo DCT",
+    "fuel_type": "Petrol",
+    "transmission": "7-speed DCT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-15",
+    "reg_number": "TN55 QM 3239",
+    "price": 1975000,
+    "km_driven": 1344,
+    "seater": 5,
+    "year": 2025,
+    "discount": "15% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Aurora Yello Pearl",
+    "static_features": [
+      "Panoramic Sunroof",
+      "ADAS Level-3",
+      "Bose 8-speaker Sound System",
+      "10.25-inch Digital Cluster",
+      "360-degree Camera",
+      "Ventilated Front Seats"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037624f"
+      },
+      "hp": 160,
+      "cc": 1497,
+      "torque": "257 Nm",
+      "mileage": {
+        "city": 17,
+        "highway": 20.7
+      },
+      "ground_clearance_mm": 195
+    },
+    "images": "Kia_seltos_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72d"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sonet",
+    "variant": "X-Line Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-01",
+    "reg_number": "BR25 YE 7257",
+    "price": 1375000,
+    "km_driven": 3322,
+    "seater": 5,
+    "year": 2025,
+    "discount": "20% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Intense Red",
+    "static_features": [
+      "Smart Air Purifier",
+      "Wireless Phone Charging",
+      "Front and Rear Parking Sensors",
+      "Connected Car Features (Kia Connect)",
+      "7-speaker Bose Sound System",
+      "Digital Instrument Cluster"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376253"
+      },
+      "hp": 116,
+      "cc": 1493,
+      "torque": "250 Nm",
+      "mileage": {
+        "city": 18.5,
+        "highway": 22
+      },
+      "ground_clearance_mm": 205
+    },
+    "images": "Kia_sonet_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72e"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sonet",
+    "variant": "X-Line Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-14",
+    "reg_number": "GJ67 LQ 8012",
+    "price": 1475000,
+    "km_driven": 5337,
+    "seater": 5,
+    "year": 2025,
+    "discount": "EMI discount up to ₹2500/month",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Matte Graphite",
+    "static_features": [
+      "Smart Air Purifier",
+      "Wireless Phone Charging",
+      "Front and Rear Parking Sensors",
+      "Connected Car Features (Kia Connect)",
+      "7-speaker Bose Sound System",
+      "Digital Instrument Cluster"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037625b"
+      },
+      "hp": 116,
+      "cc": 1493,
+      "torque": "240 Nm",
+      "mileage": {
+        "city": 18.5,
+        "highway": 22
+      },
+      "ground_clearance_mm": 205
+    },
+    "images": "Kia_sonet_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb72f"
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sonet",
+    "variant": "X-Line Diesel AT",
+    "fuel_type": "Diesel",
+    "transmission": "6-speed Automatic",
+    "body_type": "SUV",
+    "rto": "MH-02",
+    "reg_number": "AP46 BM 3408",
+    "price": 1475000,
+    "km_driven": 3055,
+    "seater": 5,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Intense Red",
+    "static_features": [
+      "Smart Air Purifier",
+      "Wireless Phone Charging",
+      "Front and Rear Parking Sensors",
+      "Connected Car Features (Kia Connect)",
+      "7-speaker Bose Sound System",
+      "Digital Instrument Cluster"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376253"
+      },
+      "hp": 116,
+      "cc": 1493,
+      "torque": "250 Nm",
+      "mileage": {
+        "city": 18.5,
+        "highway": 22
+      },
+      "ground_clearance_mm": 205
+    },
+    "images": "Kia_sonet_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb730"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Amaze",
+    "variant": "VX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-03",
+    "reg_number": "GJ69 QC 4236",
+    "price": 1050000,
+    "km_driven": 46563,
+    "seater": 5,
+    "year": 2022,
+    "discount": "10% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Lunar Silver Metallic",
+    "static_features": [
+      "LED Projector Headlamps",
+      "Automatic Climate Control",
+      "7-inch Touchscreen Infotainment System",
+      "Cruise Control",
+      "Rear Parking Camera",
+      "Dual Front Airbags"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376260"
+      },
+      "hp": 90,
+      "cc": 1199,
+      "torque": "120 Nm",
+      "mileage": {
+        "city": 18.6,
+        "highway": 24.7
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Honda_amaze_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb731"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Amaze",
+    "variant": "VX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-06",
+    "reg_number": "MH02 GV 7225",
+    "price": 1050000,
+    "km_driven": 3913,
+    "seater": 5,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Radiant Red",
+    "static_features": [
+      "LED Projector Headlamps",
+      "Automatic Climate Control",
+      "7-inch Touchscreen Infotainment System",
+      "Cruise Control",
+      "Rear Parking Camera",
+      "Dual Front Airbags"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376267"
+      },
+      "hp": 90,
+      "cc": 1199,
+      "torque": "110 Nm",
+      "mileage": {
+        "city": 17.6,
+        "highway": 24.7
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Honda_amaze_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb732"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Amaze",
+    "variant": "VX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-02",
+    "reg_number": "BR25 DE 8952",
+    "price": 1050000,
+    "km_driven": 12732,
+    "seater": 5,
+    "year": 2023,
+    "discount": "5% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Platinum Black Pearl",
+    "static_features": [
+      "LED Projector Headlamps",
+      "Automatic Climate Control",
+      "7-inch Touchscreen Infotainment System",
+      "Cruise Control",
+      "Rear Parking Camera",
+      "Dual Front Airbags"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376269"
+      },
+      "hp": 92,
+      "cc": 1199,
+      "torque": "110 Nm",
+      "mileage": {
+        "city": 18.6,
+        "highway": 24.7
+      },
+      "ground_clearance_mm": 170
+    },
+    "images": "Honda_amaze_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb733"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "City",
+    "variant": "ZX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-02",
+    "reg_number": "BR31 WP 7919",
+    "price": 1575000,
+    "km_driven": 5570,
+    "seater": 5,
+    "year": 2025,
+    "discount": "5% off or more",
+    "owners": [
+      "Second owner"
+    ],
+    "colors": "Lunar Silver Metallic",
+    "static_features": [
+      "Honda Sensing ADAS",
+      "Lane Keep Assist",
+      "Collision Mitigation Braking System",
+      "Wireless Android Auto & Apple CarPlay",
+      "Electric Sunroof",
+      "8-speaker Premium Audio System"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037626c"
+      },
+      "hp": 121,
+      "cc": 1498,
+      "torque": "145 Nm",
+      "mileage": {
+        "city": 17.8,
+        "highway": 24.1
+      },
+      "ground_clearance_mm": 165
+    },
+    "images": "Honda_city_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb734"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "City",
+    "variant": "ZX CVT",
+    "fuel_type": "CNG",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-05",
+    "reg_number": "DL59 IZ 5113",
+    "price": 1675000,
+    "km_driven": 6980,
+    "seater": 5,
+    "year": 2024,
+    "discount": "15% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Radiant Red Metallic",
+    "static_features": [
+      "Honda Sensing ADAS",
+      "Lane Keep Assist",
+      "Collision Mitigation Braking System",
+      "Wireless Android Auto & Apple CarPlay",
+      "Electric Sunroof",
+      "8-speaker Premium Audio System"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376272"
+      },
+      "hp": 131,
+      "cc": 1498,
+      "torque": "135 Nm",
+      "mileage": {
+        "city": 17.8,
+        "highway": 24.1
+      },
+      "ground_clearance_mm": 165
+    },
+    "images": "Honda_city_2.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb735"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "City",
+    "variant": "ZX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "Sedan",
+    "rto": "MH-04",
+    "reg_number": "DL33 TX 5128",
+    "price": 1575000,
+    "km_driven": 5916,
+    "seater": 5,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Radiant Silver Metallic",
+    "static_features": [
+      "Honda Sensing ADAS",
+      "Lane Keep Assist",
+      "Collision Mitigation Braking System",
+      "Wireless Android Auto & Apple CarPlay",
+      "Electric Sunroof",
+      "8-speaker Premium Audio System"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb7037626c"
+      },
+      "hp": 121,
+      "cc": 1498,
+      "torque": "145 Nm",
+      "mileage": {
+        "city": 17.8,
+        "highway": 24.1
+      },
+      "ground_clearance_mm": 165
+    },
+    "images": "Honda_city_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb736"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Elevate",
+    "variant": "ZX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-05",
+    "reg_number": "KA55 VL 9676",
+    "price": 1650000,
+    "km_driven": 2088,
+    "seater": 5,
+    "year": 2025,
+    "discount": "15% off or more",
+    "owners": [
+      "Third owner"
+    ],
+    "colors": "Obsidian Green Pearl",
+    "static_features": [
+      "7-inch Digital TFT Instrument Cluster",
+      "Adaptive Cruise Control",
+      "Honda Connect with Alexa",
+      "360-degree Camera",
+      "Ventilated Seats",
+      "LED DRLs and Tail Lamps"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376276"
+      },
+      "hp": 121,
+      "cc": 1498,
+      "torque": "145 Nm",
+      "mileage": {
+        "city": 16.5,
+        "highway": 22.2
+      },
+      "ground_clearance_mm": 220
+    },
+    "images": "Honda_elevate_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb737"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Elevate",
+    "variant": "ZX CVT",
+    "fuel_type": "Diesel",
+    "transmission": "CVT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-04",
+    "reg_number": "KA25 JO 0173",
+    "price": 1450000,
+    "km_driven": 24201,
+    "seater": 5,
+    "year": 2023,
+    "discount": "5% off or more",
+    "owners": [
+      "Fourth owner"
+    ],
+    "colors": "Phoenix Red Pearl",
+    "static_features": [
+      "7-inch Digital TFT Instrument Cluster",
+      "Adaptive Cruise Control",
+      "Honda Connect with Alexa",
+      "360-degree Camera",
+      "Ventilated Seats",
+      "LED DRLs and Tail Lamps"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376276"
+      },
+      "hp": 121,
+      "cc": 1498,
+      "torque": "145 Nm",
+      "mileage": {
+        "city": 16.5,
+        "highway": 22.2
+      },
+      "ground_clearance_mm": 220
+    },
+    "images": "Honda_elevate_1.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb738"
+    }
+  },
+  {
+    "brand": "Honda",
+    "model": "Elevate",
+    "variant": "ZX CVT",
+    "fuel_type": "Petrol",
+    "transmission": "CVT Automatic",
+    "body_type": "SUV",
+    "rto": "MH-02",
+    "reg_number": "GJ46 ZI 9833",
+    "price": 1650000,
+    "km_driven": 2170,
+    "seater": 5,
+    "year": 2025,
+    "discount": "10% off or more",
+    "owners": [
+      "First owner"
+    ],
+    "colors": "Obsidian Blue Pearl",
+    "static_features": [
+      "7-inch Digital TFT Instrument Cluster",
+      "Adaptive Cruise Control",
+      "Honda Connect with Alexa",
+      "360-degree Camera",
+      "Ventilated Seats",
+      "LED DRLs and Tail Lamps"
+    ],
+    "engine": {
+      "_id": {
+        "$oid": "6827485799784dbb70376276"
+      },
+      "hp": 121,
+      "cc": 1498,
+      "torque": "145 Nm",
+      "mileage": {
+        "city": 16.5,
+        "highway": 22.2
+      },
+      "ground_clearance_mm": 220
+    },
+    "images": "Honda_elevate_3.jpg",
+    "_id": {
+      "$oid": "68280f6dc14d99d764dcb739"
+    }
+  }
+]

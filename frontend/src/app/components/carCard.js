@@ -1,18 +1,28 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const CarCard = ({ car }) => {
-
+  const router = useRouter();
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const toggleFavorite = () => {
+  const toggleFavorite = (e) => {
+    e.stopPropagation(); // Prevent card click when clicking heart
     setIsFavorited(!isFavorited);
   };
 
+  const handleCardClick = () => {
+    // Navigate to car details page with car ID
+    router.push(`/viewcardetails?id=${car._id}`);
+  };
+
   return (
-    <Card className="p-4 shadow-lg rounded-2x1 border relative w-80">   
+    <Card 
+      className="p-4 shadow-lg rounded-2x1 border relative w-80 cursor-pointer hover:shadow-xl transition-shadow"
+      onClick={handleCardClick}
+    >   
       {/* Heart Icon */} 
       <Heart
         onClick={toggleFavorite}

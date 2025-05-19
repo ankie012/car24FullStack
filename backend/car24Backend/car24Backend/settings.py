@@ -55,6 +55,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Allow your frontend to make requests
+    "http://192.168.56.1:3000",
 ]
 
 # Optionally, if you want to allow any origin (not recommended for production):
