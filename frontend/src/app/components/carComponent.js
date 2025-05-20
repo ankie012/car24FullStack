@@ -97,8 +97,8 @@ const CarComponent = () => {
   ]);       
     
   return (
-    <div className="container mx-auto flex justify-center">
-      <div className="border w-[18%] p-4 h-[100%]">
+    <div className="flex min-h-screen">
+      <div className="w-[20%] min-h-screen border-r p-4 bg-white">
         <BudgetFilter onBudgetChange={handleBudgetChange} />
         <FuelFilter onFuelChange={setSelectedFuels} carData={filteredCars} />
         <BodyTypeFilter onBodyTypeChange={setSelectedBodyType} carData={filteredCars} />
@@ -109,7 +109,7 @@ const CarComponent = () => {
         <RTOFilter onRTOChange={setSelectedRTOs} carData={filteredCars} />
         <DiscountFilter onDiscountChange={setSelectedDiscount} />
       </div>
-      <div>
+      <div className="w-[80%] p-4">
         <h1 className="text-3xl font-bold text-center my-6">Car Listings</h1>
         <SearchBar onSearch={(q) => setSearchQuery(q)} />  
         {/* <CarList  Cars={filteredCars} />  */} 
