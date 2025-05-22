@@ -1,138 +1,85 @@
 # from pymongo import MongoClient
 # from bson import ObjectId
 
-# # Connect to MongoDB
 # client = MongoClient("mongodb://localhost:27017/")
-# db = client["cars_dealership"]
+# db = client["car_dealership"]
+# source_collection = db["newCars"] 
 
-# # Collections
-# cars_col = db["cars"]
-# brands_col = db["brands"]
-# models_col = db["models"]
-# engines_col = db["engine_specs"]
-# features_col = db["static_features"]
-# colors_col = db["colors"]
-# owners_col = db["owners"]
-# rtos_col = db["rtos"]
-# variants_col = db["variants"]
-# trans_col = db["transmissions"]
-# fuel_col = db["fuel_types"]
-# body_col = db["body_types"]
 
-# # Cache to avoid duplicates
-# caches = {
-#     "brands": {},
-#     "models": {},
-#     "engine_specs": {},
-#     "static_features": {},
-#     "colors": {},
-#     "owners": {},
-#     "rtos": {},
-#     "variants": {},
-#     "transmissions": {},
-#     "fuel_types": {},
-#     "body_types": {}
-# }
+# brands = db["brand"]
+# models = db["model"]
+# variants = db["variant"] 
+# fuel_types = db["fuel_type"]
+# body_types = db["body_type"]
+# transmissions = db["transmission"]
+# images = db["image"]
 
-# # Utility to get or create document and cache
-# def get_or_create(col, cache_key, doc):
-#     cache = caches[col.name]
-#     if cache_key not in cache:
-#         _id = col.insert_one({"name": cache_key}).inserted_id
-#         cache[cache_key] = _id
-#     return cache[cache_key]
+# brands_map, models_map = {}, {}
+# fuel_map, body_map, trans_map = {}, {},{}
+# images_map = {}
 
-# # Normalize all cars
-# cars = list(cars_col.find())
+# def get_or_create(collection, value, key, ref_map):
+#     if value not in ref_map:
+#         existing = collection.find_one({key: value})
+#         if existing:
+#             ref_map[value] = existing["_id"]
+#         else:
+#             _id = collection.insert_one({key: value}).inserted_id
+#             ref_map[value] = _id
+#     return ref_map[value]
 
-# for car in cars:
-#     # Normalize brand
-#     brand_id = get_or_create(brands_col, car["brand"], {"name": car["brand"]})
+# def insert_images(image_list):
+#     image_ids = []
+#     for img in image_list:
+#         if img not in images_map:
+#             existing = images.find_one({"filename": img})
+#             if existing:
+#                 images_map[img] = existing["_id"]
+#             else:
+#                 image_id = images.insert_one({"filename": img}).inserted_id
+#                 images_map[img] = image_id
+#         image_ids.append(images_map[img])
+#     return image_ids
 
-#     # Normalize model (needs brand)
-#     model_key = f"{car['brand']}|{car['model']}"
-#     if model_key not in caches["models"]:
-#         model_id = models_col.insert_one({
+# for car in source_collection.find():
+#     brand_id = get_or_create(brands, car["brand"], "name", brands_map)
+
+#     model_key = (brand_id, car["model"])
+#     if model_key not in models_map:
+#         # Handle images
+#         image_field = car.get("images", [])
+#         image_list = image_field if isinstance(image_field, list) else [image_field]
+#         image_ids = insert_images(image_list)
+
+#         model_doc = {
 #             "brand_id": brand_id,
-#             "name": car["model"]
-#         }).inserted_id
-#         caches["models"][model_key] = model_id
-#     else:
-#         model_id = caches["models"][model_key]
-
-#     # Normalize engine
-#     engine = car["engine"]
-#     engine_key = f"{engine['hp']}_{engine['cc']}_{engine['torque']}_{engine['mileage']['city']}_{engine['mileage']['highway']}_{engine['ground_clearance_mm']}"
-#     if engine_key not in caches["engine_specs"]:
-#         engine_id = engines_col.insert_one(engine).inserted_id
-#         caches["engine_specs"][engine_key] = engine_id
-#     else:
-#         engine_id = caches["engine_specs"][engine_key]
-
-#     # Static features
-#     feature_ids = []
-#     for feat in car["static_features"]:
-#         fid = get_or_create(features_col, feat, {"name": feat})
-#         feature_ids.append(fid)
-
-#     # Colors
-#     color_id = get_or_create(colors_col, car["colors"], {"name": car["colors"]})
-
-#     # Owner
-#     owner_id = get_or_create(owners_col, car["Owners"][0], {"name": car["Owners"][0]})
-
-#     # RTO
-#     rto_id = get_or_create(rtos_col, car["RTO"], {"code": car["RTO"]})
-
-#     # Variant
-#     variant_id = get_or_create(variants_col, car["variant"], {"name": car["variant"]})
-
-#     # Transmission
-#     trans_id = get_or_create(trans_col, car["transmission"], {"name": car["transmission"]})
-
-#     # Fuel Type
-#     fuel_id = get_or_create(fuel_col, car["fuel_type"], {"name": car["fuel_type"]})
-
-#     # Body Type
-#     body_id = get_or_create(body_col, car["body_type"], {"name": car["body_type"]})
-
-#     # Now update car with references only
-#     update_fields = {
-#         "brand_id": brand_id,
-#         "model_id": model_id,
-#         "engine_id": engine_id,
-#         "feature_ids": feature_ids,
-#         "color_id": color_id,
-#         "owner_id": owner_id,
-#         "rto_id": rto_id,
-#         "variant_id": variant_id,
-#         "transmission_id": trans_id,
-#         "fuel_type_id": fuel_id,
-#         "body_type_id": body_id
-#     }
-
-#     # Remove old raw fields
-#     remove_fields = {
-#         "brand": "",
-#         "model": "",
-#         "variant": "",
-#         "transmission": "",
-#         "fuel_type": "",
-#         "body_type": "",
-#         "colors": "",
-#         "static_features": "",
-#         "Owners": "",
-#         "RTO": "",
-#         "engine": ""
-#     }
-
-#     # Update the car document
-#     cars_col.update_one(
-#         {"_id": car["_id"]},
-#         {
-#             "$set": update_fields,
-#             "$unset": remove_fields
+#             "name": car["model"],
+#             "years_available": car.get("year", []),
+#             "image_ids": image_ids
 #         }
-#     )
+#         model_id = models.insert_one(model_doc).inserted_id
+#         models_map[model_key] = model_id
+#     else:
+#         model_id = models_map[model_key]
 
-# print("✅ Normalization complete: clean references and no duplicates in cars document.")
+#     for variant_name, details in car["variants"].items():
+#         fuel_id = get_or_create(fuel_types, details["fuel_type"], "type", fuel_map)
+#         body_id = get_or_create(body_types, details["body_type"], "type", body_map)
+#         trans_id = get_or_create(transmissions, details["transmission"], "type", trans_map)
+
+#         variant_doc = {
+#             "model_id": model_id,
+#             "name": variant_name,
+#             "price": details.get("price"),
+#             "fuel_type_id": fuel_id,
+#             "body_type_id": body_id,
+#             "transmission_id": trans_id,
+#             "colors": details.get("colors"),
+#             "seater": details.get("seater"),
+#             "engine": details.get("engine"),
+#             "static_features": details.get("static_features", [])
+#             # You can add variant-specific image support here too if needed
+#         }
+#         variants.insert_one(variant_doc)
+
+# print("✅ Data normalized with image references.")

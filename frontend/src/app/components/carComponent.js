@@ -13,6 +13,7 @@ import SeatsFilter from "./SeatsFilter";
 import OwnerFilter from "./OwnerFilter";
 import RTOFilter from "./RTOFilter";
 import DiscountFilter from "./DiscountFilter"; 
+import Pagination from "./Pagination";
 
 const CarComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -27,10 +28,13 @@ const CarComponent = () => {
   const [selectedRTOs, setSelectedRTOs] = useState([]);
   const [selectedDiscount, setSelectedDiscount] = useState(null);
   const [filteredCars, setFilteredCars] = useState([]); // Cars from API
+  const [page, setPage] = useState(1);
+  const [limit] = useState(6); // cars per page
+  const [total, setTotal] = useState(0);
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    fetchCarsWithFilters({ ...activeFilters, search: query }); // add `search` to your filter API request
+    // The useEffect will automatically trigger with the new searchQuery
   };
 
 
@@ -38,7 +42,8 @@ const CarComponent = () => {
     setMinBudget(min);
     setMaxBudget(max);
   }; 
-
+  
+  
   // 👇 Fetch cars from backend API based on filters
   useEffect(() => {
     const fetchFilteredCars = async () => {
@@ -54,7 +59,9 @@ const CarComponent = () => {
           Owners: selectedOwners,
           RTO: selectedRTOs, 
           Discount: selectedDiscount || "", 
-          search: searchQuery || ""
+          search: searchQuery || "",
+          page,
+          limit
         }; 
          
         // Remove empty fields
@@ -66,6 +73,7 @@ const CarComponent = () => {
         // Axios will convert filteredParams to query parameters in the URL
         const response = await axios.get("http://localhost:8000/filtercars/", {
           params: filteredParams, //This line tells Axios: “Attach the key-value pairs from filteredParams as query parameters in the request URL.”
+          
           paramsSerializer: (paramss) =>{  
            return qs.stringify(paramss, { arrayFormat: "repeat" })  
           }, // 👈 this is crucial Because without it, the backend might receive wrong data like:?brand[]=Honda&brand[]=Toyota
@@ -74,7 +82,8 @@ const CarComponent = () => {
        
 
         
-        setFilteredCars(response.data);
+        setFilteredCars(response.data.data);
+        setTotal(response.data.total);
 
       } catch (err) {
         console.error("Failed to fetch cars:", err); 
@@ -93,7 +102,8 @@ const CarComponent = () => {
     selectedSeats,
     selectedOwners,
     selectedRTOs,
-    selectedDiscount
+    selectedDiscount,
+    page,
   ]);       
     
   return (
@@ -113,7 +123,13 @@ const CarComponent = () => {
         <h1 className="text-3xl font-bold text-center my-6">Car Listings</h1>
         <SearchBar onSearch={(q) => setSearchQuery(q)} />  
         {/* <CarList  Cars={filteredCars} />  */} 
-        <CarList key={filteredCars.length} Cars={filteredCars} /> 
+        <CarList  Cars={filteredCars} /> 
+        <Pagination
+          currentPage={page}
+          totalItems={total}
+          itemsPerPage={limit}
+          onPageChange={setPage}
+        />
       </div>
     </div>
   );
