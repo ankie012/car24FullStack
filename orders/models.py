@@ -5,6 +5,9 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     user_type = models.CharField(max_length=10, choices=[("buyer", "Buyer"), ("seller", "Seller")], default="buyer")
+    testdrive_date = models.DateField(null=True, blank=True)
+    testdrive_time = models.TimeField(null=True, blank=True)
+    testdrive_car = models.ForeignKey(Car, on_delete=models.SET_NULL, related_name='test_drives', null=True, blank=True)
     
     def __str__(self):
         return self.name

@@ -5,10 +5,57 @@ from rest_framework import status, viewsets
 from .models import Order, User
 from cars.models import Car
 from .serializers import OrderSerializer, UserSerializer
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    
+    @action(detail=True, methods=['post'])
+    def book_test_drive(self, request, pk=None):
+        user = self.get_object()
+        testdrive_date = request.data.get('testdrive_date')
+        testdrive_time = request.data.get('testdrive_time')
+        car_id = request.data.get('car_id')
+        
+        if not testdrive_date or not testdrive_time:
+            return Response(
+                {"error": "Both test drive date and time are required"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+            
+        if not car_id:
+            return Response(
+                {"error": "Car ID is required for test drive booking"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+            
+        try:
+            car = Car.objects.get(id=car_id)
+        except Car.DoesNotExist:
+            return Response(
+                {"error": f"Car with ID {car_id} not found"}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
+            
+        user.testdrive_date = testdrive_date
+        user.testdrive_time = testdrive_time
+        user.testdrive_car = car
+        user.save()
+        
+        return Response(
+            {"success": "Test drive booked successfully", 
+             "testdrive_date": testdrive_date, 
+             "testdrive_time": testdrive_time,
+             "car": {
+                 "id": car.id,
+                 "make": car.make,
+                 "model": car.model,
+                 "year": car.year
+             }}, 
+            status=status.HTTP_200_OK
+        )
 
 class OrderListCreate(APIView):
     def get(self, request):

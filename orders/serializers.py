@@ -3,9 +3,11 @@ from .models import Order, User
 from cars.serializers import CarSerializer
 
 class UserSerializer(serializers.ModelSerializer):
+    testdrive_car_details = CarSerializer(source='testdrive_car', read_only=True)
+    
     class Meta:
         model = User
-        fields = ['id', 'name', 'email', 'user_type']
+        fields = ['id', 'name', 'email', 'user_type', 'testdrive_date', 'testdrive_time', 'testdrive_car', 'testdrive_car_details']
 
 class OrderSerializer(serializers.ModelSerializer):
     car_details = CarSerializer(source='car', read_only=True)
