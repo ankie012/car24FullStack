@@ -32,31 +32,31 @@ const FuelFilter = ({ onFuelChange, carData = [] }) => {
   }, {});
 
   return (
-    <div className="border p-4 rounded-lg shadow-sm bg-white">
+    <div className="p-3">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full p-2 text-lg font-bold"
+        className="flex justify-between items-center w-full text-base font-bold mb-2"
       >
-        <span>Fuel</span>
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+        <span>Fuel Type</span>
+        {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
       </button>
 
       {isOpen && (
-        <div className="mt-2">
+        <div className="mt-2 space-y-1">
           {fuelOptions.map(({ label, value, image }) => (
-            <div key={value} className="flex items-center justify-between p-2">
-              <label className="flex items-center">
+            <div key={value} className="flex items-center justify-between py-1.5">
+              <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
                   id={value}
                   checked={selectedFuels.includes(value)}
                   onChange={() => handleCheckboxChange(value)}
-                  className="mr-2"
+                  className="mr-2 h-4 w-4 text-blue-600 rounded focus:ring-blue-500"
                 />
                 <img src={image.url} alt={label} className="w-5 h-5 mr-2" />
-                {label}
+                <span className="text-sm">{label}</span>
               </label>
-              <span className="text-gray-500">({fuelCounts[value]})</span>
+              <span className="text-xs text-gray-500">({fuelCounts[value]})</span>
             </div>
           ))}
         </div>

@@ -1,15 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useWishlist } from "../context/WishlistContext";
 
 const CarCard = ({ car }) => {
   const router = useRouter();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const [isFavorited, setIsFavorited] = useState(false);
+  
+  // Check if car is in wishlist on component mount
+  useEffect(() => {
+    setIsFavorited(isInWishlist(car._id));
+  }, [car._id, isInWishlist]);
 
   const toggleFavorite = (e) => {
     e.stopPropagation(); // Prevent card click when clicking heart
+    
+    if (isFavorited) {
+      removeFromWishlist(car._id);
+    } else {
+      addToWishlist(car);
+    }
+    
     setIsFavorited(!isFavorited);
   };
 
@@ -20,7 +34,7 @@ const CarCard = ({ car }) => {
 
   return (
     <Card 
-      className="p-4 shadow-lg rounded-2x1 border relative w-80 cursor-pointer hover:shadow-xl transition-shadow"
+      className="p-4 shadow-lg rounded-2x1 border relative w-full cursor-pointer hover:shadow-xl transition-shadow"
       onClick={handleCardClick}
     >   
       {/* Heart Icon */} 

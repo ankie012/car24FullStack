@@ -35,11 +35,11 @@ const BudgetFilter = ({ onBudgetChange }) => {
   
 
   return (
-    <div className="p-4">
-      <h2 className="text-lg font-bold">Budget</h2>
-      <div className="flex justify-between text-blue-600 font-semibold mb-2">
-        <span>₹{values[0].toLocaleString()}</span>
-        <span>₹{values[1].toLocaleString()}</span>
+    <div className="p-3">
+      <h2 className="text-base font-bold mb-3">Budget</h2>
+      <div className="flex justify-between text-blue-600 font-semibold mb-2 text-sm">
+        <span>₹{(values[0]/100000).toFixed(1)} Lakh</span>
+        <span>₹{(values[1]/100000).toFixed(1)} Lakh</span>
       </div>
 
       <Range
@@ -68,15 +68,15 @@ const BudgetFilter = ({ onBudgetChange }) => {
             <div
               key={key}
               {...restProps}
-              className="w-4 h-4  bg-blue-700 rounded-full cursor-pointer"
+              className="w-5 h-5 bg-blue-700 rounded-full cursor-pointer shadow-md"
             />
           );
         }}
       />
 
-      <div className="flex justify-between text-gray-400 text-sm mt-2">
-        <span>Minimum</span>
-        <span>Maximum</span>
+      <div className="flex justify-between text-gray-500 text-xs mt-2">
+        <span>₹1 Lakh</span>
+        <span>₹52 Lakh</span>
       </div>
     </div>
   );

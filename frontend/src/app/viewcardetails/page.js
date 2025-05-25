@@ -22,7 +22,7 @@ const CarDetails = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:8000/cars/${carId}/`);
+        const response = await axios.get(`http://localhost:8000/api/cars/${carId}/`);
         setCar(response.data);
         setLoading(false);
       } catch (err) {
@@ -165,7 +165,11 @@ const CarDetails = () => {
   Book free test drive
 </button>
 
-<TestDriveModal isOpen={showModal} onClose={() => setShowModal(false)} />
+<TestDriveModal 
+  isOpen={showModal} 
+  onClose={() => setShowModal(false)} 
+  carId={carId}
+/>
         </div>
       </div>
       </div>
